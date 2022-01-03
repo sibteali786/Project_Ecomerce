@@ -1,0 +1,117 @@
+//Desktop
+.HeaderWrapper {
+    background-color: #252C33;
+    padding: 10px 0;
+    .HeaderSubWrap {
+        .HeaderContent {
+            justify-content: space-between;
+            .LogoWrapper {
+                display: flex;
+                align-items: center;
+                .Title {
+                    color: white;
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-weight: 600;
+                    margin-left: 10px;
+                }
+                .TitleSkin {
+                    color: #FFC58A;
+                    
+                }
+            }
+            .NavLinks {
+                display: flex;
+                align-self: center;
+                .NavContent {
+                    padding: 0px 10px;
+                    align-self: end;
+                    
+                    .Home {
+                        padding-left: 0 !important;
+                    }
+                    .GetStarted {
+                        padding-right: 0 !important;
+                    }
+                    p {
+                        color: white;
+                        font-weight: 400;
+                        font-size: 18px;
+                    }
+                }
+                .active p {
+                    font-weight: 700 !important;
+                    color: #FFC58A !important; 
+                    border-bottom: 3px solid #FFC58A;
+                }
+                .home {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+//Mobile
+.HeaderWrapperMobile {
+    display: none !important;
+    padding: 10px 0px;
+    .HeaderSubWrapMobile {    
+        .HeaderContentMobile {
+            display: flex;
+            justify-content: space-between;
+            .iconWrapperMobile {
+
+            }
+            .LogoWrapperMobile {
+                .Title {
+                    color: #252C33;
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-left: 10px;
+                }
+                .TitleSkin {
+                    color: #FFC58A;
+                }
+            }
+        }
+        .NavLinks {
+            background-color: #252C33;
+            margin-left: -15px;
+            margin-right: -15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            .NavContent {
+                text-align: -webkit-left;
+                padding: 10px 20px;
+                p {
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+            .home {
+                padding-top: 0;
+            }
+            .GetStarted {
+                margin-bottom: 0;
+            }
+            .active {
+                background-color: #3D3D3D;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .HeaderWrapperMobile {
+        display: flex !important;
+    }
+    .HeaderWrapper {
+        display: none !important;
+    }
+}
+//override
+p {
+    margin: 0;
+}

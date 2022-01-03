@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router";
-import "FAQ.scss";
+// import { withRouter } from "react-router";
+import "/FAQ.scss";
 const FAQ = () => {
   return (
     <>
@@ -9,4 +9,4 @@ const FAQ = () => {
   );
 };
 
-export default withRouter(FAQ);
+export default FAQ;

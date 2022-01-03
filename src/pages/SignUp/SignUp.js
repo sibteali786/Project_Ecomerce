@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router";
-import "SignUp.scss";
+// import { withRouter } from "react-router";
+import "./SignUp.scss";
 const SignUp = () => {
   return (
     <>
@@ -9,4 +9,4 @@ const SignUp = () => {
   );
 };
 
-export default withRouter(SignUp);
+export default SignUp;

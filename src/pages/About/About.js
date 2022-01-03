@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router";
+// import { withRouter } from "react-router";
 import "About.scss";
 const About = () => {
   return (
@@ -9,4 +9,4 @@ const About = () => {
   );
 };
 
-export default withRouter(About);
+export default About;
