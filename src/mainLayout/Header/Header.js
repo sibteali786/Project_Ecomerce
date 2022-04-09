@@ -75,7 +75,7 @@ const Header = () => {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
-            <Button variant="outlined" style={{backgroundColor: "#72509D",color:"#FFFFFF", margin:"0 0.5rem",width:"1rem"}}>
+            <Button variant="outlined" style={{backgroundColor: "#72509D",color:"#FFFFFF", margin:"0 0.5rem",minWidth:"30px",width:"40px"}}>
               <SearchIcon/>
             </Button>
             </div>
