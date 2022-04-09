@@ -1,117 +1,52 @@
 //Desktop
-.HeaderWrapper {
-    background-color: #252C33;
-    padding: 10px 0;
-    .HeaderSubWrap {
-        .HeaderContent {
-            justify-content: space-between;
-            .LogoWrapper {
-                display: flex;
-                align-items: center;
-                .Title {
-                    color: white;
-                    font-size: 24px;
-                    line-height: 30px;
-                    font-weight: 600;
-                    margin-left: 10px;
-                }
-                .TitleSkin {
-                    color: #FFC58A;
-                    
-                }
-            }
-            .NavLinks {
-                display: flex;
-                align-self: center;
-                .NavContent {
-                    padding: 0px 10px;
-                    align-self: end;
-                    
-                    .Home {
-                        padding-left: 0 !important;
-                    }
-                    .GetStarted {
-                        padding-right: 0 !important;
-                    }
-                    p {
-                        color: white;
-                        font-weight: 400;
-                        font-size: 18px;
-                    }
-                }
-                .active p {
-                    font-weight: 700 !important;
-                    color: #FFC58A !important; 
-                    border-bottom: 3px solid #FFC58A;
-                }
-                .home {
-                    color: white;
-                }
-            }
-        }
-    }
-}
+@import "./../utillities_config";
 
-//Mobile
-.HeaderWrapperMobile {
-    display: none !important;
-    padding: 10px 0px;
-    .HeaderSubWrapMobile {    
-        .HeaderContentMobile {
+.container{
+    font-family: Poppins;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 3rem;
+
+    .searchBar{
+        display:flex;
+        flex-direction: row;
+    }
+
+    .menu-desktop{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        span{
             display: flex;
-            justify-content: space-between;
-            .iconWrapperMobile {
-
+            flex-direction: column;
+            margin: 1rem 1rem;
+            img{
+                width: 32px;
+                height: 23px;
+                align-self: center;
             }
-            .LogoWrapperMobile {
-                .Title {
-                    color: #252C33;
-                    font-size: 24px;
-                    font-weight: 600;
-                    margin-left: 10px;
-                }
-                .TitleSkin {
-                    color: #FFC58A;
-                }
-            }
-        }
-        .NavLinks {
-            background-color: #252C33;
-            margin-left: -15px;
-            margin-right: -15px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            .NavContent {
-                text-align: -webkit-left;
-                padding: 10px 20px;
-                p {
-                    color: #fff;
-                    font-size: 18px;
-                }
-            }
-            .home {
-                padding-top: 0;
-            }
-            .GetStarted {
-                margin-bottom: 0;
-            }
-            .active {
-                background-color: #3D3D3D;
+            a{
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 30px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #818181;
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
             }
         }
+ 
+    }
+    max-width: 786px;
+    @media (min-width:768px) {
+        max-width: 1024px;
     }
 
-}
-
-@media screen and (max-width: 900px) {
-    .HeaderWrapperMobile {
-        display: flex !important;
+    @media (min-width:1024px) {
+        max-width: 1368px;
     }
-    .HeaderWrapper {
-        display: none !important;
-    }
-}
-//override
-p {
-    margin: 0;
 }

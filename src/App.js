@@ -1,6 +1,6 @@
 import React from "react";
 // import './App.css';
-import Login from "./pages/LogIn/Login";
+import Home from "./pages/Home/Home";
 import SignUp from "./pages/SignUp/SignUp";
 import {
   BrowserRouter,
@@ -15,10 +15,10 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route  path="/login"  
+          <Route  path="/"  
             element={
               <MainLayout>
-                  <Login/>
+                  <Home/>
               </MainLayout>
             } 
           />

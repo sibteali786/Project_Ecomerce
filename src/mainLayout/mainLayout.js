@@ -7,7 +7,7 @@ const mainLayout = (props) => {
     return(
         <>
             <Header/>
-            {props.children}
+            {props.children} 
             <Footer/>
         </>
         

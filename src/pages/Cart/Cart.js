@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import { withRouter } from "react-router";
-import "/FAQ.scss";
-const FAQ = () => {
+import "Cart.scss";
+const Cart = () => {
   return (
     <>
       <p>Hello world</p>
@@ -9,4 +9,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Cart;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./Login.scss";
-const Login = () => {
+import "./Home.scss";
+const Home = () => {
   
   
   return (
@@ -10,4 +10,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Home;

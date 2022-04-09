@@ -1,112 +1,100 @@
 import React, { useState } from 'react';
-import Grid from '@mui/material/Grid';
-//mui icons
-import MenuIcon from '@mui/icons-material/Menu';
-import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-//assets
-import Logo from "../../assets/Logo.png";
-import LogoBlack from "../../assets/LogoBlack.png";
 //styles
 import "./Header.scss";
+import {ReactComponent as ReactLogo} from "./../../assets/logo.svg";
+import { styled, alpha } from '@mui/material/styles';
+import InputBase from '@mui/material/InputBase';
+import SearchIcon from '@mui/icons-material/Search';
+import Button from '@mui/material/Button'
+
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: "#F4F4F4"
+  ,
+  '&:hover': {
+    backgroundColor: "#F4F4F4"
+    ,
+  },
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: 'auto',
+  },
+}));
+
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('lg')]: {
+      width: '60ch',
+      '&:focus': {
+        width: '70ch',
+      },
+    },
+    [theme.breakpoints.up('md')]: {
+        width: '50ch',
+        '&:focus': {
+          width: '60ch',
+        },
+      },
+  },
+}));
 
 const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
     
     return(
-        <>
-            {/*Desktop */}
-            <Grid container align="center" justifyContent={'center'} className="HeaderWrapper">
-                <Grid item xs={11} className="HeaderSubWrap">
-                    <Grid container className="HeaderContent">
-                        <Grid item className="LogoWrapper">
-                            <img width="47px" src={Logo} alt="logo" />
-                            <span className='Title'>
-                                <span className='TitleSkin'>Happy</span> 
-                                Day
-                            </span>
-                        </Grid>
-                        <Grid item align="center" className="NavLinks">
-                            <Grid item className="NavContent Home">
-                                <p>Home</p>
-                            </Grid>
-                            <Grid item className="NavContent Business">
-                                <p>Business</p>
-                            </Grid>
-                            <Grid item className="NavContent About">
-                                <p>About</p>
-                            </Grid>
-                            <Grid item className="NavContent FAQ">
-                                <p>FAQ</p>
-                            </Grid>
-                            <Grid item className="NavContent Reviews">
-                                <p>Reviews</p>
-                            </Grid>
-                            <Grid item className="NavContent ForTherapy">
-                                <p>For Therapy</p>
-                            </Grid>
-                            <Grid item className="NavContent Login">
-                                <p>Login</p>
-                            </Grid>
-                            <Grid item className="NavContent GetStarted active">
-                                <p>Get Started</p>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </Grid>
-            {/*Mobile */}
-            <Grid container align="center" justifyContent={'center'} className="HeaderWrapperMobile">
-                <Grid item xs={11} className="HeaderSubWrapMobile">
-                    <Grid container className="HeaderContentMobile">
-                        <Grid item className="iconWrapperMobile">
-                            {menuOpen ?
-                                (<MenuOpenIcon onClick={() => setMenuOpen(false)} />) 
-                                    : 
-                                (<MenuIcon onClick={() => setMenuOpen(true)}/>)
-                            }
-                        </Grid>
-                        <Grid item className="LogoWrapperMobile">
-                            <img width="47px" src={LogoBlack} alt="logo" />
-                            <span className='Title'>
-                                <span className='TitleSkin'>Happy</span> 
-                                Day
-                            </span>
-                        </Grid>    
-                    </Grid>
-                    {menuOpen ? (
-                        <Grid item align="center" className="NavLinks">
-                            <Grid item className="NavContent Home">
-                                <p>Home</p>
-                            </Grid>
-                            <Grid item className="NavContent Business">
-                                <p>Business</p>
-                            </Grid>
-                            <Grid item className="NavContent About">
-                                <p>About</p>
-                            </Grid>
-                            <Grid item className="NavContent FAQ">
-                                <p>FAQ</p>
-                            </Grid>
-                            <Grid item className="NavContent Reviews">
-                                <p>Reviews</p>
-                            </Grid>
-                            <Grid item className="NavContent ForTherapy">
-                                <p>For Therapy</p>
-                            </Grid>
-                            <Grid item className="NavContent Login">
-                                <p>Login</p>
-                            </Grid>
-                            <Grid item className="NavContent GetStarted active">
-                                <p>Get Started</p>
-                            </Grid>
-                        </Grid>    
-                            ) : (
-                                null
-                            ) 
-                    }
-                </Grid>
-            </Grid>
-        </>
+        <div className='container'>
+            <div className='logo'>  
+                <ReactLogo/>
+            </div>
+            <div className='searchBar'>
+            <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+                color="primary"
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
+            <Button variant="outlined" style={{backgroundColor: "#72509D",color:"#FFFFFF", margin:"0 0.5rem",width:"1rem"}}>
+              <SearchIcon/>
+            </Button>
+            </div>
+            <div className='menu-desktop'>
+                    <span >
+                    <img src = {require('./../../assets/delivery.png').default} alt="Delievry truck"/>
+                    <a>Delivery</a>
+                    </span>
+                    <span >
+                    <img src = {require('./../../assets/cart.png').default} alt="Cart" style={{width :"22px", height :"24.73px"}}/>
+                    <a>Cart</a>
+                    </span>
+                    <span >
+                    <img src = {require('./../../assets/user.png').default} alt="User" style={{width :"22px", height :"24px"}}/>
+                    <a>Mi Cuenta</a>
+                    </span>
+                    
+            </div>
+        </div>
     )
     
 }
