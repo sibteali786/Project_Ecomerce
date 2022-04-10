@@ -2,9 +2,9 @@
 
 .textField{
     margin:0.5rem 0;
-    width:50%;
+    width:250px;
     background-color:#FFFFFF;
-    padding: 0.2rem 0.4rem;
+    padding: 0.5rem 0.4rem;
     border-radius: 0.2rem;
     display: flex;
     flex-direction: row;
@@ -19,4 +19,15 @@
             outline:none;
         }
     }
+    @media (min-width:1024px){
+        width:700px;
+    }
+
+    @media (min-width:768px){
+        width:600px;
+    }
+    @media (min-width:450px){
+        width:400px;
+    }
+
 }

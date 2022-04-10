@@ -38,7 +38,12 @@
                 margin-top: 0.2rem;
                 margin-bottom: 0.2rem;
             }
+            &:hover {
+                color:$secondaryColor;
+                fill: $secondaryColor;
+            }
         }
+        
  
     }
     max-width: 786px;

@@ -1,16 +1,14 @@
 @import "../utillities_config";
 .footerWrapper{
-    display: flex;
-    flex-direction: column;
-
-
+    display: block;    
+    background-color: $SearchColor;
     .mailingList{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background-color: $secondaryColor;
-        height:400px;
+        height:300px;
         h2{
             font-size: 1rem;
             font-weight: 600;
@@ -19,19 +17,94 @@
             color:#FFFFFF;
             margin:2rem 0;
             @media (min-width:1024px){
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
             
             @media (min-width:768px){
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+
+            @media (min-width:450px){
+                font-size: 1.5rem;
             }
         }
         .socialMedia{
-            width:50%;
+            width:250px;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             margin:2rem 0;
+            @media (min-width:1024px){
+                width:500px;
+            }
+            @media (min-width:768px){
+                width:400px;
+            }
+        }
+    }
+
+    .main-footer{
+        padding : 3rem 3rem;
+        padding-bottom: 1rem ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .linksSection{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            @media (max-width : 768px){
+                display: block;
+            }
+        }
+        .main-elements{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            div{
+                display: flex;
+                flex-direction: column;
+                a{
+                    color: #3F3F3F;
+                    line-height: 28px;
+                    font-size: 0.9rem;
+                }
+            }
+            h3{
+                font-size:1.5rem;
+                font-weight: 600;
+            }
+            
+        }
+        .copyrights{
+            text-align: center;
+            line-height: 15px;
+            font-size: 1rem;
+            margin-bottom : 2rem;
+            a{
+                text-transform: uppercase;
+                font-family: Poppins;
+                font-weight: 600;
+                line-height: 15px;
+                text-align: center;
+                margin: 0 1rem;
+    
+            }
+            @media (max-width:800px){
+                display: flex;
+                flex-direction: column;
+
+                a{
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+        @media (max-width : 768px){
+            display: block;
         }
     }
 }
