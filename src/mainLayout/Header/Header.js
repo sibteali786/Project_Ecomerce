@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //styles
 import "./Header.scss";
 import {ReactComponent as ReactLogo} from "./../../assets/logo.svg";
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import Button from '@mui/material/Button'

@@ -1,0 +1,21 @@
+@import "./../utillities_config";
+
+.textField{
+    width:50%;
+    background-color:#FFFFFF;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    input{
+        border:none;
+        width:100%;
+        &:focus{
+            border:none;
+            outline:none;
+        }
+    }
+}
