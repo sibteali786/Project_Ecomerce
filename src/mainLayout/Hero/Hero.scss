@@ -2,6 +2,9 @@
     background: url(./../../assets/heroImg.png) center/cover;
     min-height:350px;
     position: relative;
+    /*Things to complete*/
+    /* 1. Code for screens lesser then 450px */ 
+
     @media (max-width:840px){
         .heroModal{
             display:none;
@@ -20,7 +23,9 @@
         height: 245px;
         padding: 2rem 3rem;
         position: absolute;
-        left: 50px;
+        /* Code for screens lesser then 450px */ 
+
+        /* Code for Large Screens */
         @media (min-width:1024px){
             left:100px;
             height: 345px;
