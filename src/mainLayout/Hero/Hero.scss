@@ -1,0 +1,48 @@
+.Hero{
+    background: url(./../../assets/heroImg.png) center/cover;
+    min-height:350px;
+    position: relative;
+    @media (max-width:840px){
+        .heroModal{
+            display:none;
+        }
+    }
+    @media (min-width:768px){
+        min-height:450px;
+        
+    }
+    @media (min-width:1024px){
+        min-height:550px;
+    }
+    .heroModal{
+        background-color: #DEC177;
+        width: 320px;
+        height: 245px;
+        padding: 2rem 3rem;
+        position: absolute;
+        left: 50px;
+        @media (min-width:1024px){
+            left:100px;
+            height: 345px;
+            width:440px;
+        }
+        h4{
+            font-family: Dancing Script;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: left;
+            @media (min-width:1024px){
+                font-size: 3rem;
+            }
+        }
+        h2{
+            font-weight: 500;
+            font-size: 3rem;
+            text-align: left;
+            @media (min-width:1024px){
+                font-size: 4rem;
+            }
+        }
+    }
+
+}  
