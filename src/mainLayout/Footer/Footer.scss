@@ -2,6 +2,7 @@
 .footerWrapper{
     display: block;    
     background-color: $SearchColor;
+    min-width: 450px;
     .mailingList{
         display: flex;
         flex-direction: column;
@@ -56,8 +57,18 @@
             align-items: flex-start;
             margin-bottom: 1rem;
             @media (max-width : 768px){
-                display: block;
+                display: grid;
+                gap:1.5rem;
+                grid-template-columns: repeat(2,1fr);
             }
+            @media (max-width : 450px) {
+                display:block;
+                align-self: center;
+                .main-elements{
+                    margin-top: 1rem;
+                }   
+            }
+            
         }
         .main-elements{
             display: flex;
