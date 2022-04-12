@@ -1,7 +1,10 @@
 .Hero{
     background: url(./../../assets/heroImg.png) center/cover;
-    min-height:350px;
+    min-height:180px;
     position: relative;
+    @media (min-width:768px){
+        min-height:350px;
+    }
     /*Things to complete*/
     /* 1. Code for screens lesser then 450px */ 
 
