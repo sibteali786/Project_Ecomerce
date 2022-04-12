@@ -25,7 +25,7 @@ const Home = () => {
       <Hero/>
       <div style={{display: "flex",justifyContent: "center"}} className="emptyDiv">
 
-      <Grid container spacing={1}  className="modalContainer">
+      <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 1 }}  className="modalContainer">
       <Grid item xs={12} sm={12} md={2}>
           <Typography variant="h6" style={{color:"#FFFFFF",fontSize:"1rem"}}>BUSCA TU REGALO</Typography>
         </Grid>
@@ -35,7 +35,7 @@ const Home = () => {
             label="Comuna"
             variant="filled"
             placeholder="A que comuna envias"
-            style={{backgroundColor:"#FFFFFF",borderRadius:"0.3rem"}}
+            style={{backgroundColor:"#FFFFFF",borderRadius:"0.3rem",width:"100%"}}
           />
         </Grid>
         <Grid item xs={12} sm={4} md={2}>
@@ -45,7 +45,7 @@ const Home = () => {
             placeholder="Cumpleanos"
             variant="filled"
             size = "medium"
-            style={{backgroundColor:"#FFFFFF",borderRadius:"0.3rem"}}
+            style={{backgroundColor:"#FFFFFF",borderRadius:"0.3rem",width:"100%"}}
           />
         </Grid>
         <Grid item xs={12} sm={4} md={2}>
@@ -54,11 +54,11 @@ const Home = () => {
             label="Fecha y hora de entrega"
             placeholder="lunas, 21 feb"
             variant="filled"
-            style={{backgroundColor:"#FFFFFF",borderRadius:"0.3rem"}}
+            style={{backgroundColor:"#FFFFFF",borderRadius:"0.3rem",width:"100%"}}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={2}>
-          <Button variant="contained" style={{backgroundColor:"#72509D",color:"#FFFFFF"}}>
+          <Button variant="contained" style={{backgroundColor:"#72509D",color:"#FFFFFF",padding:"0.2rem 1rem"}}>
             encontrar regalo
           </Button>
       </Grid>
