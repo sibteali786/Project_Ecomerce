@@ -8,6 +8,7 @@ import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import ProductSection from "../../mainLayout/ProductSection/ProductSection";
+import Service from "../../mainLayout/Service/Service";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -64,6 +65,7 @@ const Home = () => {
     </Grid>
       </div>
       <ProductSection/>
+      <Service/>
     </div>
   );
 };

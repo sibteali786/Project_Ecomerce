@@ -21,7 +21,7 @@
     }
     .cards{
         display: grid;
-        gap:1.2rem;
+        gap:1.5rem;
         grid-template-columns: repeat(1,1fr);
         @media (min-width:768px){
             grid-template-columns: repeat(2,1fr);
@@ -30,7 +30,10 @@
             grid-template-columns: repeat(3,1fr);
         }
         .ItemCotainer{
-            padding: 3rem 2rem;
+            padding-top: 3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 0.2rem;
             display: flex;
             flex-direction: column;
         }

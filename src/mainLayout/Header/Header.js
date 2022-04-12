@@ -49,16 +49,16 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       },
     },
     [theme.breakpoints.up('md')]: {
-        width: '50ch',
+        width: '40ch',
         '&:focus': {
-          width: '60ch',
+          width: '50ch',
         },
       },
   },
 }));
 
 const Header = () => {
-    
+    const [menu,setMenu] = useState();
     return(
         <div className='container'>
             <div className='logo'>  
