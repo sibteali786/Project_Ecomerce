@@ -7,6 +7,7 @@ import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
+import ProductSection from "../../mainLayout/ProductSection/ProductSection";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -25,7 +26,7 @@ const Home = () => {
 
       <Grid container spacing={1}  className="modalContainer">
       <Grid item xs={12} sm={12} md={2}>
-          <Typography variant="h6" style={{color:"#FFFFFF"}}>BUSCA TU REGALO</Typography>
+          <Typography variant="h6" style={{color:"#FFFFFF",fontSize:"1rem"}}>BUSCA TU REGALO</Typography>
         </Grid>
         <Grid item xs={12} sm={4} md={2} >
           <TextField
@@ -61,6 +62,7 @@ const Home = () => {
       </Grid>
     </Grid>
       </div>
+      <ProductSection/>
     </div>
   );
 };
