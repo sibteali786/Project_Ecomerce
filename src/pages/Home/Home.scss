@@ -1,17 +1,27 @@
 .landingContainer{
     min-width: 450px;
+    .emptyDiv{
+        @media(max-width:768px){
+            height:auto;
+        }
+        @media (min-width:768px) {
+            height:0px;
+        }
+    }
     .modalContainer{
         position:relative;
         background-color:#000000;
         padding:2rem 1rem;
-        width:70%;
-        top:-90px;
+        width:100%;
+        top:0;
         height:max-content;
         @media (min-width:768px) {
             width:80%;
+            top:-113px;
         }
         @media (min-width:900px){
-            justify-content: flex-start;
+            justify-content: space-around;
+            top:-100px;
         }
         @media (min-width:1024px){
             justify-content: space-evenly;

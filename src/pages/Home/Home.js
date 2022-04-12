@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div className="landingContainer">
       <Hero/>
-      <div style={{height:"0px",display: "flex",justifyContent: "center"}} className="emptyDiv">
+      <div style={{display: "flex",justifyContent: "center"}} className="emptyDiv">
 
       <Grid container spacing={1}  className="modalContainer">
       <Grid item xs={12} sm={12} md={2}>
@@ -43,6 +43,7 @@ const Home = () => {
             label="Ocasión"
             placeholder="Cumpleanos"
             variant="filled"
+            size = "medium"
             style={{backgroundColor:"#FFFFFF",borderRadius:"0.3rem"}}
           />
         </Grid>
