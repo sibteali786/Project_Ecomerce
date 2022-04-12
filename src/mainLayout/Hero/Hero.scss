@@ -2,6 +2,12 @@
     background: url(./../../assets/heroImg.png) center/cover;
     min-height:180px;
     position: relative;
+    @media (min-width:450px){
+        min-height:254px;
+    }
+    @media (min-width:650px){
+        min-height:290px;
+    }
     @media (min-width:768px){
         min-height:350px;
     }
