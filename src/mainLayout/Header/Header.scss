@@ -67,3 +67,10 @@
         max-width: 1368px;
     }
 }
+.Drawer{
+    span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+}
