@@ -5,7 +5,9 @@ import {ReactComponent as ReactLogo} from "./../../assets/logo.svg";
 import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import Button from '@mui/material/Button'
+import Button from '@mui/material/Button';
+import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from '@mui/material/IconButton';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -42,18 +44,24 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
+    [theme.breakpoints.up('xs')]: {
+      width: '10ch',
+      '&:focus': {
+        width: '12ch',
+      },
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '35ch',
+      '&:focus': {
+        width: '40ch',
+      },
+    },
     [theme.breakpoints.up('lg')]: {
       width: '60ch',
       '&:focus': {
         width: '70ch',
       },
     },
-    [theme.breakpoints.up('md')]: {
-        width: '40ch',
-        '&:focus': {
-          width: '50ch',
-        },
-      },
   },
 }));
 
@@ -93,6 +101,11 @@ const Header = () => {
                     <a>Mi Cuenta</a>
                     </span>
                     
+            </div>
+            <div className="menuMobile">
+              <IconButton aria-label="">
+                <MenuIcon/>
+              </IconButton>
             </div>
         </div>
     )
