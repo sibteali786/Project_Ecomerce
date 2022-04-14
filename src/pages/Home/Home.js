@@ -64,8 +64,11 @@ const Home = () => {
       </Grid>
     </Grid>
       </div>
+      <div style={{margin:"0 auto"}}>
+
       <ProductSection/>
       <Service/>
+      </div>
     </div>
   );
 };

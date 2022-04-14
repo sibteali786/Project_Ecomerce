@@ -73,7 +73,7 @@ const Header = () => {
       setState(open);
     }
     return(
-        <div className='container'>
+        <div className='Header'>
             <div className='logo'>  
                 <ReactLogo/>
             </div>

@@ -1,15 +1,16 @@
 @import "../utillities_config";
 .footerWrapper{
-    max-width: 1368px;
     display: block;    
     background-color: $SearchColor;
-    min-width: 450px;
+    min-width:  450px;
+    #upperFooter{
+        background-color: $secondaryColor;
+    }
     .mailingList{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: $secondaryColor;
         height:300px;
         h2{
             font-size: 1rem;
@@ -51,6 +52,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        max-width: 1368px;
+        margin:0 auto;
         .linksSection{
             display: flex;
             flex-direction: row;

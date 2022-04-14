@@ -1,15 +1,15 @@
 //Desktop
 @import "./../utillities_config";
 
-.container{
+.Header{
     font-family: Poppins;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding:0 3rem;
-    margin:0 0;
-
+    padding:0 0;
+    margin:0 auto;
+    max-width: 1368px;
     .searchBar{
         display:flex;
         flex-direction: row;
@@ -58,14 +58,6 @@
         }
     }
     min-width:490px;
-    max-width: 786px;
-    @media (min-width:768px) {
-        max-width: 1024px;
-    }
-
-    @media (min-width:1024px) {
-        max-width: 1368px;
-    }
 }
 .Drawer{
     span{

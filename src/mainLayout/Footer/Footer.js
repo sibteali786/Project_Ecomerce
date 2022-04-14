@@ -10,7 +10,10 @@ import IconButton from '@mui/material/IconButton'
 const Footer = () => {
     return(
         <div className="footerWrapper">
-            <div className="mailingList">
+            
+            <div id="upperFooter">
+                <div className="mailingList" >
+
                 <h2>
                     Join Our Exclusive Mailing List 
                 </h2>
@@ -28,7 +31,9 @@ const Footer = () => {
                     <Tiktok/> 
                     </IconButton>
                 </div>
+                </div>
             </div>
+            
             <div className="main-footer">
                 <div className="linksSection">
                     

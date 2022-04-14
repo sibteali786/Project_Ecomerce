@@ -1,6 +1,6 @@
 .productSection{
     background-color: #E5E5E5;
-    padding:3rem 3rem;
+    padding:3rem 0;
 
     h1 {
         text-align: center;
@@ -23,6 +23,9 @@
         display: grid;
         gap:1.5rem;
         grid-template-columns: repeat(1,1fr);
+        max-width: 1368px;
+        margin: 0 auto;
+        padding: 0 3rem;
         @media (min-width:768px){
             grid-template-columns: repeat(2,1fr);
         }
