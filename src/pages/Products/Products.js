@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { productImages } from './../../assets/productImages/index';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import {Navigation, Thumbs} from "swiper";
@@ -9,6 +9,7 @@ import 'swiper/modules/thumbs/thumbs.scss';
 import "./Products.scss";
 
 const Products = () => {
+    const [activeThumb, setactiveThumb] = useState();
   return (
     <div className="ProductContainer">
         {/* Product Display Slider */}
@@ -17,8 +18,9 @@ const Products = () => {
             loop={true}
             spaceBetween={5}
             navigation={true}
-            modules={[Navigation,Thumbs]}
+            modules={[Navigation,Thumbs]}   
             grabCursor ={true}
+            thumbs={{swiper:activeThumb}}
             className="product-image-slider"
             style={{width:"300px",height:"400px"}}
             >
@@ -30,7 +32,8 @@ const Products = () => {
                     ))
                 }
             </Swiper>
-            <Swiper 
+            <Swiper
+            onSwiper={setactiveThumb} 
             loop={true}
             spaceBetween={10}
             slidesPerView={4}
@@ -42,7 +45,7 @@ const Products = () => {
                     productImages.map((item,index)=>(
                         <SwiperSlide key={index}>
                             <div className="product-image-slider-thumbs-wrapper">
-                                <img src={item.default} alt="product Image" />
+                                <img src={item.default} alt="product Image" style={{width:"100%",height:"auto"}} />
                             </div>
                         </SwiperSlide>
                     ))
