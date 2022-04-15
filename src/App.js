@@ -9,11 +9,15 @@ import {
 } from "react-router-dom";
 //main Layout
 import MainLayout from "./mainLayout/mainLayout";
+import Products from './pages/Products/Products';
+import Header from './mainLayout/Header/Header';
+import Footer from "./mainLayout/Footer/Footer";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
+      <Header/>
         <Routes>
           <Route  path="/"  
             element={
@@ -22,9 +26,10 @@ const App = () => {
               </MainLayout>
             } 
           />
-          <Route  path="/sign-up" element={<SignUp/>} />
-          {/* <Navigate  from="/" to="/login" element={<Login/>} /> */}
+          <Route  path="/product" element={<Products/>} />
+          
           </Routes>
+          <Footer/>
         </BrowserRouter>
     </>
   );
