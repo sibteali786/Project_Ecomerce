@@ -9,6 +9,9 @@ import 'swiper/modules/thumbs/thumbs.scss';
 import "./Products.scss";
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
+import DateRangeIcon from '@mui/icons-material/DateRange';
+import IconButton from '@mui/material/IconButton'
 
 const Products = () => {
     function handleClick(event) {
@@ -51,6 +54,68 @@ const Products = () => {
             </Stack>
         </div>
         {/* Product Display Slider */}
+        <div className="productDetails">
+        <div className="productInformation">
+            <div style={{
+                display:"flex",
+                justifyContent:"space-around"
+            }}>
+            <h6>
+                Vino 3V y Botanas con Globo "Love You"
+            </h6>
+            <h6 style={{fontWeight:"bold"}}>
+                $1,115.00 <span style={{color:"#72509D"}}> MXN </span>
+            </h6>
+            </div>
+            <Divider style={{color:"#C4C4C4"}}/>
+            <div id="productDescription1">
+                <h6>
+                    1.- Selecciona un horario
+                </h6>
+                <p>
+                * Se hará un cargo de envío por $99.00 MXN
+                </p>
+                <div className="Cards">
+                    <div >
+
+                    <h6>
+                        Hoy
+                    </h6>
+                    <p style={{color:"#FFFFFF",backgroundColor:"#72509D",padding:"1rem 0.5rem"}}>
+                        08:00am - 02:00pm
+                    </p>
+                    <p>
+                        25 febrero
+                    </p>
+                    <p>
+                        10:00am - 04:00pm
+                    </p>
+                    <p>
+                        03:00am - 08:00pm
+                    </p>
+                    </div>
+                    <div >
+
+                    <h6>
+                        Manana
+                    </h6>
+                    
+                    <p>
+                        26 febrero
+                    </p>
+                    </div>
+                    <div >
+                        <IconButton aria-label="Calendar Icon button">
+                        <DateRangeIcon size="small"/>
+                        </IconButton>
+                    <p>
+                        Mas fechas
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <Divider/>
+        </div>
         <div className="sliderProduct">
         <Swiper 
             loop={true}
@@ -89,6 +154,7 @@ const Products = () => {
                     ))
                 }
             </Swiper>
+        </div>
         </div>
     </div>
   )
