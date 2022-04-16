@@ -6,7 +6,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'
 import CardMedia from '@mui/material/CardMedia'
-import "./ProductSection.scss"
+import "./ProductSection.scss";
+import { Link } from 'react-router-dom';
 
 const ProductSection = () => {
   return (
@@ -16,14 +17,16 @@ const ProductSection = () => {
             <Card className="ItemCotainer" style={{backgroundColor: "#DDCEC14D"}} >
                 <img src={require("./../../assets/image4.png").default} />
                 <CardActions style={{width:"100%"}}>
-                    <Button size="large" style={{backgroundColor:"#513A32",width:"100%"}} variant='contained'>Postreys pasteles</Button>
+                    <Button size="large" style={{backgroundColor:"#513A32",width:"100%"}} variant='contained'>
+                       <Link to="/product"> Postreys pasteles </Link></Button>
                 </CardActions>
             </Card>
            
             <Card className="ItemCotainer" style={{backgroundColor:"#AA38324D"}} >
                 <img src={require("./../../assets/image9.png").default} />
                 <CardActions style={{width:"100%"}}>
-                    <Button size="large" style={{backgroundColor:"#AA3832",width:"100%"}} variant='contained'>botanas y licories</Button>
+                    <Button size="large" style={{backgroundColor:"#AA3832",width:"100%"}} variant='contained'>
+                      <Link to="/product">  botanas y licories </Link></Button>
                 </CardActions>
             </Card>
           
@@ -31,7 +34,11 @@ const ProductSection = () => {
             <Card className="ItemCotainer" style={{backgroundColor: "#2ACDF94D"}}>
                 <img src={require("./../../assets/image6.png").default} />
                 <CardActions style={{width:"100%"}}>
-                    <Button size="large" style={{backgroundColor:"#00678E",width:"100%"}} variant='contained'>Globos</Button>
+                    <Button size="large" style={{backgroundColor:"#00678E",width:"100%"}} variant='contained'>
+                        <Link to="/product">
+                        Globos
+                        </Link>
+                        </Button>
                 </CardActions>
             </Card>
           
@@ -39,7 +46,12 @@ const ProductSection = () => {
             <Card className="ItemCotainer" style={{backgroundColor:"#FDB8B24D",justifyContent:"space-between"}}>
                 <img src={require("./../../assets/image5.png").default} id="abnormal" />
                 <CardActions style={{width:"100%"}}>
-                    <Button size="large" style={{backgroundColor:"#D59368",width:"100%"}} variant='contained'>Flores y Plantas</Button>
+                    <Button size="large" style={{backgroundColor:"#D59368",width:"100%"}} variant='contained'>
+                        
+                        <Link to="/product">
+                        Flores y Plantas
+                        </Link>
+                        </Button>
                 </CardActions>
             </Card>
           
@@ -47,7 +59,11 @@ const ProductSection = () => {
             <Card className="ItemCotainer" style={{backgroundColor: "#D963284D"}}>
                 <img src={require("./../../assets/image7.png").default} />
                 <CardActions style={{width:"100%"}}>
-                    <Button size="large" style={{backgroundColor:"#D96328",width:"100%"}} variant='contained'>regalos</Button>
+                    <Button size="large" style={{backgroundColor:"#D96328",width:"100%"}} variant='contained'>
+                        <Link to="/product">
+                        regalos
+                        </Link>
+                        </Button>
                 </CardActions>
             </Card>
           
@@ -55,7 +71,12 @@ const ProductSection = () => {
             <Card className="ItemCotainer" style={{backgroundColor: "#A5A9524D"}}>
                 <img src = {require("./../../assets/image8.png").default} />
                 <CardActions style={{width:"100%"}}>
-                    <Button size="large" style={{backgroundColor:"#A5A952",width:"100%"}} variant='contained'>condolencias</Button>
+                    <Button size="large" style={{backgroundColor:"#A5A952",width:"100%"}} variant='contained'>
+                        <Link to="/product">
+                        condolencias
+                        </Link>
+                        
+                        </Button>
                 </CardActions>
             </Card>
           
