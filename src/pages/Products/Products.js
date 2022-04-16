@@ -26,6 +26,8 @@ import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import { productImagesButton } from "./../../assets/productImagesBottom/index";
+import ProductCard from "./../../mainLayout/ProductCard/ProductCard";
 const Products = () => {
   // List Item state
   const [open, setOpen] = React.useState(false);
@@ -330,30 +332,25 @@ const Products = () => {
                 className="DetailList"
               >
                 <ListItemButton>
-                  <ListItemIcon>
-                    {">"}
-                  </ListItemIcon>
-                  <ListItemText primary="Caja rígida decorativa o reutilizable tipo libro color hueso y foil color champagne."/>
+                  <ListItemIcon>{">"}</ListItemIcon>
+                  <ListItemText primary="Caja rígida decorativa o reutilizable tipo libro color hueso y foil color champagne." />
                 </ListItemButton>
                 <ListItemButton>
-                  <ListItemIcon>
-                    {">"}
-                  </ListItemIcon>
+                  <ListItemIcon>{">"}</ListItemIcon>
                   <ListItemText primary="Medidas de la caja: 36.5 cm x 21 cm x 9.5 cm" />
                 </ListItemButton>
                 <ListItemButton onClick={handleClickList}>
-                  <ListItemIcon>
-                    {">"}
-                  </ListItemIcon>
-                  <ListItemText style={{color:"#72509D",textDecoration:"underline"}} primary="see more" />
+                  <ListItemIcon>{">"}</ListItemIcon>
+                  <ListItemText
+                    style={{ color: "#72509D", textDecoration: "underline" }}
+                    primary="see more"
+                  />
                   {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Collapse in={open} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
                     <ListItemButton sx={{ pl: 4 }}>
-                      <ListItemIcon>
-                        {">"}
-                      </ListItemIcon>
+                      <ListItemIcon>{">"}</ListItemIcon>
                       <ListItemText primary="Random Text" />
                     </ListItemButton>
                   </List>
@@ -368,6 +365,11 @@ const Products = () => {
             Item Three
           </TabPanel>
         </div>
+      </div>
+      <div className="productSlide">
+        {productImagesButton.map((item, index) => (
+          <ProductCard key={index} value={item} />
+        ))}
       </div>
     </div>
   );
