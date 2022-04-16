@@ -366,6 +366,11 @@ const Products = () => {
           </TabPanel>
         </div>
       </div>
+      <div
+        className="productSlideHeading"
+      >
+        <h4>Productos relacionados</h4>
+      </div>
       <div className="productSlide">
         {productImagesButton.map((item, index) => (
           <ProductCard key={index} value={item} />
