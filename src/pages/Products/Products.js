@@ -16,13 +16,64 @@ import { selectableProductImages } from "./../../assets/selectableProductImages/
 import Carousel from "react-elastic-carousel";
 import { ReactComponent as Gift } from "./../../assets/gift.svg";
 import Button from "@mui/material/Button";
-
-
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import PropTypes from "prop-types";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
 const Products = () => {
+  // List Item state
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickList = () => {
+    setOpen(!open);
+  };
+  // Tab panel State
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   function handleClick(event) {
     event.preventDefault();
     console.info("You clicked a breadcrumb.");
   }
+
+  // tab Panel Component
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+      >
+        {value === index && <div>{children}</div>}
+      </div>
+    );
+  }
+  // Props Types for TabPanel
+  TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+  };
+
+  function a11yProps(index) {
+    return {
+      id: `simple-tab-${index}`,
+      "aria-controls": `simple-tabpanel-${index}`,
+    };
+  }
+
   const [activeThumb, setactiveThumb] = useState();
   const breadcrumbs = [
     <a key="1" href="/" onClick={handleClick}>
@@ -211,15 +262,111 @@ const Products = () => {
           </div>
           <Divider style={{ color: "#C4C4C4" }} />
           <div id="productTotal">
-              <h6>
-              4.- Agregar a tu carrito
-              </h6>
-              <Button variant="contained" style={{backgroundColor:"#72509D",color:"#FFFFFF",width:"100%"}}>
+            <h6>4.- Agregar a tu carrito</h6>
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "#72509D",
+                color: "#FFFFFF",
+                width: "100%",
+              }}
+            >
               Agregar ( $1,150.00 MXN)
-              </Button>
-              <p> El mensaje de la tarjeta podrás escribirlo más adelante en la sección
-                de "Datos de Envío y Formas de Pago". </p>
+            </Button>
+            <p>
+              {" "}
+              El mensaje de la tarjeta podrás escribirlo más adelante en la
+              sección de "Datos de Envío y Formas de Pago".{" "}
+            </p>
           </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="secondary tabs example"
+            className="productDetailTab"
+          >
+            <Tab {...a11yProps(0)} label="Descripción del producto" />
+            <Tab {...a11yProps(1)} label="Políticas de envío" />
+            <Tab {...a11yProps(2)} label="Políticas de Sustitución" />
+          </Tabs>
+        </div>
+        <div style={{ margin: "0 0.3rem" }}>
+          <TabPanel value={value} index={0}>
+            <div>
+              <h4
+                style={{
+                  fontWeight: "bold",
+                  marginTop: "0.8rem",
+                  marginBottom: "0.8rem",
+                }}
+              >
+                Vino 3V y Botanas con Globo "Love You"
+              </h4>
+              <p style={{ textAlign: "left" }}>
+                Demuestra tu agradecimiento y cariño con nuestra exclusiva
+                canasta Vinum la cual contiene la combinación perfecta de vino y
+                botanas que hará de este, el regalo perfecto junto con un globo
+                con la frase "Love you". Nuestra caja titulada Vinum, palabra de
+                origen latin que significa Vino, conecta el origen de esta
+                bebida que tiene presencia desde antiguas civilizaciones, y se
+                posiciona hasta el día de hoy como la bebida por excelencia para
+                celebraciones.
+              </p>
+              <h5 style={{ fontWeight: "bold" }}>
+                Especificaciones del Empaque:
+              </h5>
+              <List
+                sx={{
+                  width: "100%",
+                  maxWidth: 360,
+                  bgcolor: "background.paper",
+                }}
+                component="nav"
+                aria-labelledby="nested-list-subheader"
+                className="DetailList"
+              >
+                <ListItemButton>
+                  <ListItemIcon>
+                    {">"}
+                  </ListItemIcon>
+                  <ListItemText primary="Caja rígida decorativa o reutilizable tipo libro color hueso y foil color champagne."/>
+                </ListItemButton>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {">"}
+                  </ListItemIcon>
+                  <ListItemText primary="Medidas de la caja: 36.5 cm x 21 cm x 9.5 cm" />
+                </ListItemButton>
+                <ListItemButton onClick={handleClickList}>
+                  <ListItemIcon>
+                    {">"}
+                  </ListItemIcon>
+                  <ListItemText style={{color:"#72509D",textDecoration:"underline"}} primary="see more" />
+                  {open ? <ExpandLess /> : <ExpandMore />}
+                </ListItemButton>
+                <Collapse in={open} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemIcon>
+                        {">"}
+                      </ListItemIcon>
+                      <ListItemText primary="Random Text" />
+                    </ListItemButton>
+                  </List>
+                </Collapse>
+              </List>
+            </div>
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            Item Two
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            Item Three
+          </TabPanel>
         </div>
       </div>
     </div>

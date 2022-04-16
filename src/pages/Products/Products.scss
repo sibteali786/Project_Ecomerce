@@ -1,6 +1,7 @@
 @import "./../../mainLayout/utillities_config";
 
 .ProductContainer{
+    font-family: "Poppins";
     margin: 0 auto;
     padding: 0 3rem;
     display: flex;
@@ -197,5 +198,39 @@
             }
         }
     }
-    
+
+    .productDetailTab{
+        width:100%;
+        padding: 1.3rem 0.4rem;
+        border: 1px solid #818181; 
+        border-radius: 0.2rem;
+        button{
+            height:80px;
+            background-color: transparent;
+            color:$primaryFontColor;
+            border-radius: 0.2rem;
+            width:100%;
+            font-size: 1rem;
+            &[aria-selected="true"]{
+                background-color: $secondaryColor;
+                color:#FFF;
+
+            }
+        }
+        .MuiTabs-flexContainer{
+            display:grid;
+            gap:2rem;
+            grid-template-columns: repeat(3,1fr);
+            justify-items: center;
+        }
+        .MuiTabs-indicator{
+            background-color: transparent;
+        }
+    }
+    .DetailList{
+        .MuiListItemIcon-root{
+            color:$secondaryColor;
+            font-weight: 700;
+        }
+    } 
 }  
