@@ -12,8 +12,11 @@ import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import IconButton from "@mui/material/IconButton";
-import { selectableProductImages } from './../../assets/selectableProductImages/index';
-import Carousel from 'react-elastic-carousel';
+import { selectableProductImages } from "./../../assets/selectableProductImages/index";
+import Carousel from "react-elastic-carousel";
+import { ReactComponent as Gift } from "./../../assets/gift.svg";
+import Button from "@mui/material/Button";
+
 
 const Products = () => {
   function handleClick(event) {
@@ -53,6 +56,49 @@ const Products = () => {
       </div>
       {/* Product Display Slider */}
       <div className="productDetails">
+        <div className="sliderProduct">
+          <Swiper
+            loop={true}
+            spaceBetween={5}
+            navigation={true}
+            modules={[Navigation, Thumbs]}
+            grabCursor={true}
+            thumbs={{ swiper: activeThumb }}
+            className="product-image-slider"
+            style={{ width: "500px", height: "500px" }}
+          >
+            {productImages.map((item, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={item.default}
+                  alt="product Image"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <Swiper
+            onSwiper={setactiveThumb}
+            loop={true}
+            spaceBetween={10}
+            slidesPerView={3}
+            modules={[Navigation, Thumbs]}
+            className="product-image-slider-thumbs"
+            style={{ marginTop: "1rem", width: "500px" }}
+          >
+            {productImages.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="product-image-slider-thumbs-wrapper">
+                  <img
+                    src={item.default}
+                    alt="product Image"
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
         <div className="productInformation">
           <div
             style={{
@@ -125,59 +171,55 @@ const Products = () => {
               </div>
             </div>
           </div>
+          <Divider style={{ color: "#C4C4C4" }} />
           <div id="productDescription3">
-                <h6>3.- Complementar pedido (opcional)</h6>
-                <Carousel itemsToShow={3} className="carousel">
-                    {selectableProductImages.map((item,index)=>(
-                        <div key={index}>
-                            <img src={item.default}/>
-                        </div>
-                    ))}
-                </Carousel>
-          </div>
-        </div>
-        <div className="sliderProduct">
-          <Swiper
-            loop={true}
-            spaceBetween={5}
-            navigation={true}
-            modules={[Navigation, Thumbs]}
-            grabCursor={true}
-            thumbs={{ swiper: activeThumb }}
-            className="product-image-slider"
-            style={{ width: "500px", height: "500px" }}
-          >
-            {productImages.map((item, index) => (
-              <SwiperSlide key={index}>
-                <img
-                  src={item.default}
-                  alt="product Image"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <Swiper
-            onSwiper={setactiveThumb}
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={3}
-            modules={[Navigation, Thumbs]}
-            className="product-image-slider-thumbs"
-            style={{ marginTop: "1rem", width: "500px" }}
-          >
-            {productImages.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="product-image-slider-thumbs-wrapper">
-                  <img
-                    src={item.default}
-                    alt="product Image"
-                    style={{ width: "100%", height: "auto" }}
-                  />
+            <h6>3.- Complementar pedido (opcional)</h6>
+            <Carousel itemsToShow={3} className="carousel">
+              {selectableProductImages.map((item, index) => (
+                <div key={index}>
+                  <img src={item.src.default} />
+                  <h6>{item.title}</h6>
+                  <h6 style={{ color: "black", fontWeight: "bold" }}>
+                    {item.price}
+                  </h6>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+              ))}
+            </Carousel>
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              marginTop: "0.8rem",
+              marginBottom: "0.8rem",
+            }}
+          >
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "transparent",
+                width: "100%",
+                height: "60px",
+                border: "1px solid black",
+              }}
+              startIcon={<Gift />}
+            >
+              <p style={{ fontSize: "medium", marginBottom: "0" }}>
+                Ver globos y mas
+              </p>
+            </Button>
+          </div>
+          <Divider style={{ color: "#C4C4C4" }} />
+          <div id="productTotal">
+              <h6>
+              4.- Agregar a tu carrito
+              </h6>
+              <Button variant="contained" style={{backgroundColor:"#72509D",color:"#FFFFFF",width:"100%"}}>
+              Agregar ( $1,150.00 MXN)
+              </Button>
+              <p> El mensaje de la tarjeta podrás escribirlo más adelante en la sección
+                de "Datos de Envío y Formas de Pago". </p>
+          </div>
         </div>
       </div>
     </div>

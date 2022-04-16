@@ -21,9 +21,9 @@
     .productDetails{
         display: grid;
         gap: 1.5rem;
-        grid-template-columns: 1fr 1fr;     
+        grid-template-columns: 1fr 2fr;     
         .sliderProduct{
-            grid-column: 3/5;
+            grid-column: 1/2;
             padding: 0 0;
             width:500px;
             background-color: #FFF;
@@ -100,7 +100,7 @@
             }
         }
         .productInformation{
-            grid-column: 1/3;
+            grid-column: 2/5;
             h6{
                 font-size: 0.8rem;
             }
@@ -166,13 +166,34 @@
 
             }
             #productDescription3{
+                margin-top: 0.8rem;
+                margin-bottom: 0.8rem;
                 width:100%;
                 .carousel{
                     button{
                         color:$secondaryColor;
+                        border-color: $secondaryColor;
+                    }
+                    h6{
+                        color:$primaryFontColor;
                     }
                 }
             
+            }
+            #productTotal{
+                margin-top: 0.8rem;
+                margin-bottom: 0.8rem;
+                width:"100%";
+                Button{
+                    height:"50px";
+                }
+                p{
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    color:$primaryFontColor;
+                    font-size: 0.8rem;
+                    text-align: left;
+                }
             }
         }
     }
