@@ -12,6 +12,7 @@ import MainLayout from "./mainLayout/mainLayout";
 import Products from './pages/Products/Products';
 import Header from './mainLayout/Header/Header';
 import Footer from "./mainLayout/Footer/Footer";
+import MyAccount from "./pages/MyAccount/MyAccount";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             } 
           />
           <Route  path="/product" element={<Products/>} />
+          <Route path="/myaccount" element={<MyAccount/>} />
           
           </Routes>
           <Footer/>

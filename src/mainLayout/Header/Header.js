@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import Drawer from '@mui/material/Drawer'
+import { Link } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -103,7 +104,7 @@ const Header = () => {
                     </span>
                     <span >
                     <img src = {require('./../../assets/user.png').default} alt="User" style={{width :"22px", height :"24px"}}/>
-                    <a>Mi Cuenta</a>
+                    <Link to="/myaccount">Mi Cuenta</Link>
                     </span>
                     
             </div>
