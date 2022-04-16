@@ -5,6 +5,7 @@
     padding: 0 3rem;
     display: flex;
     flex-direction: column;
+    max-width: 1368px;
     a{
         text-decoration: none;
         color:$primaryFontColor;
@@ -15,19 +16,24 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
     }
     .productDetails{
         display: grid;
         gap: 1.5rem;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;     
         .sliderProduct{
-            grid-column: 4/5;
+            grid-column: 3/5;
             padding: 0 0;
             width:500px;
             background-color: #FFF;
-            padding:20px;
+            padding-top:20px;
+            padding-bottom: 20px;
             height:100%;
-    
+            .swiper{
+                margin-left:auto;
+                margin-right:0;
+            }
             .product-image-slider{
                 .swiper-slider{
                     padding-top: 100%;
@@ -94,7 +100,7 @@
             }
         }
         .productInformation{
-            grid-column: 1/4;
+            grid-column: 1/3;
             h6{
                 font-size: 0.8rem;
             }

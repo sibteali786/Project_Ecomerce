@@ -142,7 +142,7 @@ const Products = () => {
                     <h6 style={{fontWeight:"bold"}}>
                         $69
                     </h6>
-                    <p style={{fontWeight:"bold"}}>
+                    <p style={{fontWeight:"bold",color:"#000000"}}>
                         DELUXE
                     </p>
                     <p>
@@ -167,6 +167,11 @@ const Products = () => {
                     </div>
                 
             </div>
+            <div id="productDescription3">
+                    <div>
+
+                    </div>
+            </div>
         </div>
         <div className="sliderProduct">
         <Swiper 
@@ -177,7 +182,7 @@ const Products = () => {
             grabCursor ={true}
             thumbs={{swiper:activeThumb}}
             className="product-image-slider"
-            style={{width:"300px",height:"400px"}}
+            style={{width:"400px",height:"500px"}}
             >
                 {
                     productImages.map((item,index)=>(
@@ -191,10 +196,10 @@ const Products = () => {
             onSwiper={setactiveThumb} 
             loop={true}
             spaceBetween={10}
-            slidesPerView={4}
+            slidesPerView={3}
             modules={[Navigation,Thumbs]}
             className="product-image-slider-thumbs"
-            style={{marginTop:"1rem",width:"300px"}}
+            style={{marginTop:"1rem",width:"400px"}}
             >
                 {
                     productImages.map((item,index)=>(
