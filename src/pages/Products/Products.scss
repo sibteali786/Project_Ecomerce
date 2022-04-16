@@ -138,6 +138,27 @@
                     grid-template-columns: repeat(3,1fr);
                 }
             }
+
+            #productDescription2{
+                margin-top: 0.8rem;
+                margin-bottom: 0.8rem;
+                .Cards2{
+                    display: grid;
+                    gap:0.5rem;
+                    grid-template-columns: repeat(3,1fr);
+                    div{
+                        padding:8px;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        border: 1px solid $primaryFontColor;    
+                        border-radius: 5px;
+                    }
+                }
+
+            }
         }
     }
     

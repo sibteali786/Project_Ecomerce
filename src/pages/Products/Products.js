@@ -115,6 +115,58 @@ const Products = () => {
                 </div>
             </div>
             <Divider/>
+            <div id="productDescription2">
+
+                <h6>
+                2.-Agrandar producto (opcional)
+                </h6>
+                <div className="Cards2">
+                    <div >
+
+                    <h6>
+                        $84
+                    </h6>
+                    <p>
+                        GRAND
+                    </p>
+                    <p>
+                    JG Rose Stems
+                    Triple line Blooms
+                    </p>
+                    </div>
+
+                    <div style={{
+                        border: "1px solid #72509D"
+                    }}>
+
+                    <h6 style={{fontWeight:"bold"}}>
+                        $69
+                    </h6>
+                    <p style={{fontWeight:"bold"}}>
+                        DELUXE
+                    </p>
+                    <p>
+                    24 Rose Stems
+                    Double the Blooms
+                    </p>
+                    </div>
+
+                    <div>
+
+                    <h6>
+                        $24
+                    </h6>
+                    <p >
+                        ORIGINAL
+                    </p>
+                    <p>
+                    12 Rose Stems
+                    A Classic Sized Bouq
+                    </p>
+                    </div>
+                    </div>
+                
+            </div>
         </div>
         <div className="sliderProduct">
         <Swiper 
