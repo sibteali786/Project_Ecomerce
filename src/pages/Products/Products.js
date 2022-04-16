@@ -182,7 +182,7 @@ const Products = () => {
             grabCursor ={true}
             thumbs={{swiper:activeThumb}}
             className="product-image-slider"
-            style={{width:"400px",height:"500px"}}
+            style={{width:"500px",height:"500px"}}
             >
                 {
                     productImages.map((item,index)=>(
@@ -199,7 +199,7 @@ const Products = () => {
             slidesPerView={3}
             modules={[Navigation,Thumbs]}
             className="product-image-slider-thumbs"
-            style={{marginTop:"1rem",width:"400px"}}
+            style={{marginTop:"1rem",width:"500px"}}
             >
                 {
                     productImages.map((item,index)=>(
