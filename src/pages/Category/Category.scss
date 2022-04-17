@@ -1,0 +1,44 @@
+@import "./../../mainLayout/utillities_config";
+.categoryContainer{
+    font-family: "Poppins";
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 1368px;
+
+    .topNavigation{
+        margin-left:auto;
+    }
+
+    .PageLayout{
+        display:grid;
+        gap:2rem;
+        .span-1{
+            text-decoration:uppercase;
+            color:$secondaryColor;
+        }
+
+        .span-4{
+            button{
+                background-color: $secondaryColor;
+                color:#FFF;
+            }
+        }
+
+        .span-5{
+            border: 1px solid $primaryFontColor;
+            border-radius:6px;
+            padding: 1rem;
+
+            .seeachInFilter{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+        }
+    }
+
+} 
