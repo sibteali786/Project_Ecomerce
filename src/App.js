@@ -14,6 +14,7 @@ import Header from './mainLayout/Header/Header';
 import Footer from "./mainLayout/Footer/Footer";
 import MyAccount from "./pages/MyAccount/MyAccount";
 import Category from './pages/Category/Category';
+import Cart from './pages/Cart/Cart';
 
 const App = () => {
   return (
@@ -30,7 +31,8 @@ const App = () => {
           />
           <Route  path="/product" element={<Products/>} />
           <Route path="/myaccount" element={<MyAccount/>} />
-          <Route path="/category" element={<Category/>}/> 
+          <Route path="/category" element={<Category/>}/>
+          <Route path="/cart" element={<Cart/>} />
           
           </Routes>
           <Footer/>
