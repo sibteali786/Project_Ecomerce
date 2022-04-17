@@ -65,10 +65,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Category = () => {
   // handling the collapsing menu state
-  const [open, setOpen] = React.useState(true);
+  const [openProduct, setopenProduct] = React.useState(true);
 
-  const handleClick = () => {
-    setOpen(!open);
+  const handleProduct = () => {
+    setopenProduct(!openProduct);
+  };
+
+  // Collapsed menu
+  const [openCollection, setopenCollection] = React.useState(true);
+
+  const handleCollection = () => {
+    setopenProduct(!openCollection);
   };
   // Handling select box event state
   const [age, setAge] = React.useState("");
@@ -155,21 +162,26 @@ const Category = () => {
           </IconButton>
           <h6>Rango de precio</h6>
           <div className="seeachInFilter">
-          <TextField label="Desde" variant="outlined" />
-          <TextField label="Hasta" variant="outlined" />
-          <IconButton aria-label="" style={{ fontSize: "2rem" }}>
-            {">"}
-          </IconButton>
+            <TextField label="Desde" variant="outlined" />
+            <TextField label="Hasta" variant="outlined" />
+            <IconButton aria-label="" style={{ fontSize: "2rem" }}>
+              {">"}
+            </IconButton>
           </div>
           <Divider />
-          <div style={{display:"flex",flexDirection:"row",justifyContent:"space-around"}}>
-          <h6>Producto</h6>
-          <IconButton aria-label="" onClick={handleClick}>
-          {open ? <ExpandLess /> : <ExpandMore />}
-            
-          </IconButton>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+            }}
+          >
+            <h6>Producto</h6>
+            <IconButton aria-label="" onClick={handleProduct}>
+              {openProduct ? <ExpandLess /> : <ExpandMore />}
+            </IconButton>
           </div>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={openProduct} timeout="auto" unmountOnExit>
             <List
               sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
             >
@@ -209,6 +221,20 @@ const Category = () => {
               })}
             </List>
           </Collapse>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+            }}
+          >
+            <h6>Coleooion</h6>
+            <IconButton aria-label="" onClick={handleCollection}>
+              {openCollection ? <ExpandLess /> : <ExpandMore />}
+            </IconButton>
+          </div>
+          <Collapse in={openCollection} timeout="auto" unmountOnExit></Collapse>
+          <Button variant="contained" style={{color:"#FFF",backgroundColor:"#72509D"}}>Limpiar Filtros (0)</Button>
         </div>
         <div className="span-6"></div>
         <div className="span-7"></div>
