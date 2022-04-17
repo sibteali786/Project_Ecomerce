@@ -4,4 +4,46 @@
     margin:0 auto;
     padding:0 3rem;
     
+
+    .span-1{
+        .NavbarCart{
+            #title{
+                margin:0;
+                margin-top:0.5rem;
+                font-size: 0.8rem;                
+            }
+
+        }
+    }
+
+    .span-2{
+        border:1px solid $primaryFontColor;
+        border-radius: 6px;
+        padding:1rem 1rem;
+        .numbers{
+            button{
+
+                background-color: black;
+                color:#FFF;
+                border-radius: 50%;
+                height:30px;
+                width:30px;
+            }
+        }
+        .socialMedia{
+            .facebook{
+                background-color: #FFF;
+                color: #6174A5;
+                border : 1px solid #6174A5;
+            }
+    
+            .google{
+                background-color: #FFF;
+                color: #D96328;
+                border: 1px solid #D96328;
+            }
+        }
+        
+
+    }
 }

@@ -1,34 +1,29 @@
+.superdiv {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
 .leftdiv {
-  width: 253px;
-  height: 455px;
+  grid-column: 1/2;
+  grid-row: 1/3;
 
-  position: relative;
   background: #ffffff;
   box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  left: 70px;
   text-align: -webkit-center;
-  margin-bottom: 60px;
   text-align-last: center;
 }
-/*@media screen and (max-width: 1190px) {
-  .leftdiv {
-    width: 253px;
-    height: 455px;
-  }
-}*/
 
 .leftdiv a {
-  width: 200px;
-
+  width: 230px;
   padding: 10px;
-
   color: rgba(129, 129, 129, 1);
   text-decoration: none;
   font-family: "Poppins";
   padding-right: 143px;
-  position: relative;
-  top: 20px;
+  text-align-last: justify;
+  // position: relative;
+  // top: 20px;
   display: block;
   border-radius: 6px;
 }
@@ -38,22 +33,24 @@
   color: rgba(255, 255, 255, 1);
   border-radius: 7px;
 }
+.leftdiv a:active {
+  background: #72509d;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 7px;
+}
 
 .line {
-  width: 200px;
-  height: -1px;
-  left: 175px;
-  top: 795px;
-  margin-top: 30px;
+  width: 80%;
+  margin-top: 3px;
   color: red;
-  border: 1px solid #e5e5e5a2;
+  border: 0.5px solid #e5e5e5a2;
 }
 .logdiv {
-  position: relative;
-  top: 23px;
   background-color: "red";
   width: 200px;
   display: flex;
+  margin-top: 25px;
+  padding-bottom: 20px;
 }
 .logdiv img {
   width: 20px;
@@ -63,57 +60,51 @@
   font-weight: 600;
   margin-left: 10px;
 }
+.socialcards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column: 2/5;
+  grid-row: 1/2;
+  grid-column-gap: 0.5rem;
+}
+
 .carddiv {
-  width: 150px;
-  height: 140px;
+  //width: 150px;
+  //height: 140px;
   background: #ffffff;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  position: relative;
-  left: 100px;
-
-  justify-content: center;
-}
-.socialcards {
   display: flex;
-  margin-left: 10px;
-  height: 160px;
+  align-items: center;
+  flex-direction: column;
+  //justify-content: center;
+  justify-content: space-evenly;
 }
-.socialcards div {
-  margin-left: 10px;
-}
+
 .cardpic {
+  margin-top: 10px;
   width: 60px;
   height: 60px;
-  position: relative;
-  left: 45px;
-  top: 20px;
 }
 .carddiv p {
-  font-size: 12px;
-  text-align: center;
-  position: relative;
-  top: 30px;
-}
-.bothdiv {
-  display: blocks;
+  font-size: 75%;
 }
 
 .buttondiv {
-  margin-left: -9px;
-  height: 200px;
-  display: flex;
+  grid-column: 2/5;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0.5rem;
 }
 
 .buttoncard {
-  width: 210px;
-  height: 222px;
+  // width: 210px;
+  //height: 222px;
   background: #ffffff;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   position: relative;
-  left: 102px;
-  margin-left: 40px;
 
   justify-content: center;
 }
@@ -145,26 +136,22 @@
   border-radius: 2px;
 }
 .para {
+  grid-column: 2/5;
+  grid-row: 3/4;
   width: 970px;
   height: 85px;
   background: rgba(114, 80, 157, 0.2);
-  //margin-left: 380px;
-  //margin-bottom: 100px;
-  //margin-top: -110px;
+
   border-radius: 10px;
-  position: relative;
-  left: 381px;
-  top: -110px;
 }
 .speakerdiv {
+  grid-column: 2/5;
+  grid-row: 4/5;
   background: #ffffff;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   width: 970px;
   height: 200px;
-  position: relative;
-  left: 381px;
-  top: -80px;
 }
 
 .speakerdiv h6 {
@@ -174,13 +161,13 @@
   top: 23px;
 }
 .line2 {
-  width: 920px;
+  width: 95%;
   height: 0px;
   position: relative;
   left: 21px;
   top: 40px;
 
-  border: 1px solid #e5e5e5;
+  border: 1px solid #e5e5e57b;
 }
 
 .speakerdiv2 img {
@@ -214,11 +201,10 @@
   margin-left: 20px;
 }
 .tablediv {
-  position: relative;
+  grid-column: 2/5;
+  grid-row: 5/6;
   width: 970px;
   height: 320px;
-  left: 381px;
-  top: -50px;
 
   background: #ffffff;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
@@ -246,6 +232,7 @@
   top: 50px;
   left: 20px;
   width: 925px;
+  overflow-x: auto;
 }
 .table1 tr th {
   background-color: #f4f4f4;
@@ -270,15 +257,14 @@
 }
 
 .enddiv {
-  position: relative;
+  grid-column: 2/5;
+  grid-row: 6/7;
   width: 970px;
   height: 200px;
-  left: 381px;
-  top: -20px;
   background: #ffffff;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 .enddiv h6 {
   font-weight: 600;
@@ -301,3 +287,256 @@
   left: 20px;
   top: 60px;
 }
+
+//<-------------------------------------------------------------------------------------------------------->
+/*
+@media screen and (max-width: 899px) {
+  .leftdiv {
+    width: 250px;
+    height: 500px;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    left: 40px;
+    text-align: -webkit-center;
+    margin-bottom: 60px;
+    text-align-last: center;
+  }
+
+  .leftdiv a {
+    width: 220px;
+    padding: 10px;
+    color: rgba(129, 129, 129, 1);
+    text-decoration: none;
+    font-family: "Poppins";
+    padding-right: 143px;
+    position: relative;
+    top: 20px;
+    display: block;
+    border-radius: 6px;
+    font-size: 120%;
+    text-align-last: start;
+  }
+  .logdiv {
+    position: relative;
+    top: 25px;
+    left: 3px;
+    background-color: "red";
+    width: 200px;
+    display: flex;
+  }
+  .logdiv img {
+    width: 12%;
+    height: 12%;
+  }
+  .logdiv h6 {
+    font-size: 100%;
+    margin-left: 20px;
+  }
+
+  .carddiv {
+    display: flex;
+    width: 170px;
+    height: 160px;
+    justify-content: center;
+  }
+
+  .cardpic {
+    width: 40%;
+    height: 40%;
+    position: relative;
+    top: 30px;
+    left: 53px;
+  }
+  .carddiv p {
+    font-size: 100%;
+    text-align: center;
+    position: relative;
+    top: 105px;
+    left: -32px;
+  }
+  .buttondiv {
+    margin-top: 200px;
+    margin-left: -30px;
+  }
+  .buttoncard {
+    width: 250px !important;
+    height: 250px !important;
+    background: #ffffff;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    left: 102px;
+    margin-left: 22px !important;
+
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .buttoncard p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .buttoncard h5 {
+    line-height: 0%;
+    font-size: 25px;
+    text-align: center;
+    color: rgba(114, 80, 157, 1);
+    font-weight: 600;
+  }
+  .para {
+    margin-top: 450px;
+    width: 845px;
+    height: 110px;
+    background: rgba(114, 80, 157, 0.2);
+    border-radius: 10px;
+    position: relative;
+    left: 25px;
+  }
+  .para h6 {
+    font-size: 120%;
+  }
+  .para p {
+    font-size: 120%;
+    margin-top: 15px;
+  }
+  .buttoncard {
+    width: 420px;
+    height: 444px;
+    background: #ffffff;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    left: 102px;
+    margin-left: 40px;
+
+    justify-content: center;
+  }
+  .speakerdiv {
+    width: 855px;
+    height: 200px;
+    position: relative;
+    left: 25px;
+    top: -80px;
+  }
+
+  .speakerdiv h6 {
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+    top: 23px;
+  }
+  .speakerdiv2 img {
+    position: relative;
+    left: 21px;
+    top: 66px;
+    width: 8%;
+  }
+  .speakerdiv2 p {
+    position: relative;
+    left: 96px;
+    top: 13px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    line-height: 0.3;
+    font-size: 15px;
+  }
+  .socialapp {
+    width: 330px;
+    height: 80px;
+    position: relative;
+    left: 510px;
+    top: -68px;
+    background: #f4f4f4;
+    border-radius: 80px;
+  }
+  .socialapp img {
+    position: relative;
+    top: 20px;
+    width: 13%;
+    margin-left: 10px;
+  }
+  .tablediv {
+    position: relative;
+    width: 855px;
+    height: 320px;
+    left: 25px;
+    top: -50px;
+    overflow: auto;
+    background: #ffffff;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .tablediv h6 {
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    left: 20px;
+    top: 23px;
+  }
+  .table1 {
+    position: relative;
+    top: 40px;
+    left: 20px;
+    width: 925px;
+    overflow-x: auto;
+  }
+  .table1 tr th {
+    background-color: #f4f4f4;
+    padding-left: 35px;
+    height: 50px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .table1 tr td {
+    font-weight: 500;
+    padding-left: 35px;
+    padding-top: 15px;
+    font-size: 15px;
+    color: #000000;
+    margin-left: 50px;
+    font-weight: 500;
+  }
+  .table1 tr td:last-child {
+    padding-left: 20px;
+  }
+
+  .enddiv {
+    position: relative;
+    width: 855px;
+    height: 235px;
+    left: 25px;
+    top: -20px;
+    background: #ffffff;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 100px;
+  }
+  .enddiv h6 {
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+    top: 23px;
+  }
+  .endline {
+    position: relative;
+    width: 95% !important;
+    height: 0px;
+    left: 20px;
+    top: 40px;
+    border: 0.4px solid #e5e5e59d;
+    //border: 0.4px solid red;
+  }
+  .enddiv p {
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    left: 20px;
+    top: 60px;
+  }
+}
+*/
