@@ -23,6 +23,10 @@ import Checkbox from "@mui/material/Checkbox";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import ProductCard from "./../../mainLayout/ProductCard/ProductCard";
+import { collectionImages } from "./../../assets/collectionImages/index";
+import Pagination from "@mui/material/Pagination";
+
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -156,10 +160,19 @@ const Category = () => {
           <Button variant="contabied">$ Mayor a menor</Button>
         </div>
         <div className="span-5">
-          <h5>FILTROS</h5>
-          <IconButton aria-label="">
-            <Filter />
-          </IconButton>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <h5>FILTROS</h5>
+            <IconButton aria-label="">
+              <Filter />
+            </IconButton>
+          </div>
           <h6>Rango de precio</h6>
           <div className="seeachInFilter">
             <TextField label="Desde" variant="outlined" />
@@ -173,7 +186,8 @@ const Category = () => {
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-around",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <h6>Producto</h6>
@@ -225,7 +239,8 @@ const Category = () => {
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-around",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <h6>Coleooion</h6>
@@ -234,10 +249,32 @@ const Category = () => {
             </IconButton>
           </div>
           <Collapse in={openCollection} timeout="auto" unmountOnExit></Collapse>
-          <Button variant="contained" style={{color:"#FFF",backgroundColor:"#72509D"}}>Limpiar Filtros (0)</Button>
+          <Button
+            variant="contained"
+            style={{ color: "#FFF", backgroundColor: "#72509D" }}
+          >
+            Limpiar Filtros (0)
+          </Button>
         </div>
-        <div className="span-6"></div>
-        <div className="span-7"></div>
+        <div className="span-6">
+          <Divider />
+          <div className="collectionArr">
+            {collectionImages.map((item, index) => (
+              <ProductCard key={index} value={item} />
+            ))}
+            {collectionImages.map((item, index) => (
+              <ProductCard key={index} value={item} />
+            ))}
+            {collectionImages.map((item, index) => (
+              <ProductCard key={index} value={item} />
+            ))}
+          </div>
+        </div>
+        <div className="span-7" >
+          <Stack spacing={2}>
+            <Pagination count={10} />
+          </Stack>
+        </div>
       </div>
     </div>
   );
