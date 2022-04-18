@@ -320,6 +320,7 @@ const Cart = () => {
                 display: "grid",
                 gridTemplateColumns: "0.45fr 0.1fr 0.45fr",
                 gap: "1rem",
+                marginBottom:"1rem"
               }}
             >
               <div
