@@ -96,7 +96,7 @@ const Header = () => {
             <div className='menu-desktop'>
                     <span >
                     <img src = {require('./../../assets/delivery.png').default} alt="Delievry truck"/>
-                    <a>Delivery</a>
+                    <Link to="/category">Delivery</Link>
                     </span>
                     <span >
                     <img src = {require('./../../assets/cart.png').default} alt="Cart" style={{width :"22px", height :"24.73px"}}/>
@@ -130,7 +130,7 @@ const Header = () => {
 
                   <span style={{margin:"1rem 0rem"}}>
                     <img src = {require('./../../assets/delivery.png').default} alt="Delievry truck"/>
-                    <a>Delivery</a>
+                    <Link to = "/category">Delivery</Link>
                   </span>
                   <span style={{margin:"1rem 0rem"}} >
                     <img src = {require('./../../assets/cart.png').default} alt="Cart" style={{width :"22px", height :"24.73px"}}/>

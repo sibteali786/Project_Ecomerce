@@ -214,12 +214,14 @@ const Cart = () => {
                 src={require("./../../assets/Rectangle69.png").default}
                 alt="productImage"
               />
+              <div>
               <h6>DEMIN</h6>
               <p className="productdDetails">
                 Method de page Todos ios methdos habiito.
               </p>
               <p>TALE : 1</p>
               <p>cantidad : 1 Combiar</p>
+              </div>
               <strong>$9.900</strong>
             </div>
             <div>
