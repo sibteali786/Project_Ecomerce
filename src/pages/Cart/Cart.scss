@@ -1,56 +1,106 @@
 @import "./../../mainLayout/utillities_config";
-.cartContainer{
-    max-width:1368px;
-    margin:0 auto;
-    padding:0 3rem;
-    
+.cartContainer {
+  max-width: 1368px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  .Step2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    .span-1 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
 
-    .span-1{
-        .NavbarCart{
-            #title{
-                margin:0;
-                margin-top:0.5rem;
-                font-size: 0.8rem;                
-            }
-
+      .NavbarCart {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        #title {
+          margin: 0;
+          margin-top: 0.5rem;
+          font-size: 0.8rem;
         }
+      }
     }
 
-    .span-2{
-        border:1px solid $primaryFontColor;
-        border-radius: 6px;
-        padding:1rem 1rem;
-        .numbers{
-            button{
+    .span-2 {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      border: 1px solid $primaryFontColor;
+      border-radius: 6px;
+      padding: 1rem 1rem;
 
-                background-color: black;
-                color:#FFF;
-                border-radius: 50%;
-                height:30px;
-                width:30px;
-            }
+      .socialMedia {
+        .facebook {
+          background-color: #fff;
+          color: #6174a5;
+          border: 1px solid #6174a5;
         }
-        .socialMedia{
-            .facebook{
-                background-color: #FFF;
-                color: #6174A5;
-                border : 1px solid #6174A5;
-            }
-    
-            .google{
-                background-color: #FFF;
-                color: #D96328;
-                border: 1px solid #D96328;
-            }
-        }
-        
 
-    }
-    .span-3{
-        .radioSelection{
-            border:1px solid $primaryFontColor;
-            padding: 0.8rem 0.5rem;
-            border-radius: 4px;
+        .google {
+          background-color: #fff;
+          color: #d96328;
+          border: 1px solid #d96328;
         }
+      }
     }
+    .span-3 {
+      grid-row-start: 2;
+      grid-row-end: 4;
+      border: 1px solid $primaryFontColor;
+      border-radius: 6px;
+      padding: 1rem 1rem;
+      .radioSelection {
+        border: 1px solid $primaryFontColor;
+        padding: 0.8rem 0.5rem;
+        border-radius: 4px;
+      }
+    }
+
+    .span-4 {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      border: 1px solid $primaryFontColor;
+      border-radius: 6px;
+      padding: 1rem 1rem;
+
+      .reviewProductCard {
+      }
+    }
+
+    .span-5 {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      background-color: #f4f4f4;
+      border-radius: 2px;
+    }
+
+    .span-6 {
+      grid-column-start: 3;
+      grid-row-start: 5;
+      grid-row-end: 6;
+      background-color: #72509d33;
+      border: 1px solid #c4c4c4;
+      padding: 1rem 1rem;
+    }
+
+    .buttonViolet {
+      background-color: #72509d;
+      color: #fff;
+    }
+    .numbers {
+      button {
+        background-color: black;
+        color: #fff;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
 }

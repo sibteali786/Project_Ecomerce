@@ -20,7 +20,6 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
-
 const steps = [
   "Checkout",
   "User Information",
@@ -36,19 +35,17 @@ const Cart = () => {
   const handleClickShowPassword = () => setShowPassword(!showPassword);
   const handleMouseDownPassword = () => setShowPassword(!showPassword);
   // Handle the dynamic input adding ability
-  const [inputFields, setInputFields] = useState([
-    {text:""}
-  ]);
+  const [inputFields, setInputFields] = useState([{ text: "" }]);
   // Function for adding the input fields
-  const handleChangeinput = (index,event)=>{
+  const handleChangeinput = (index, event) => {
     const values = [...inputFields];
     values[index][event.target.name] = event.target.value;
     setInputFields(values);
     console.log(values);
-  }
-  const addTextFields = ()=>{
-    setInputFields([...inputFields,{text:""}])
-  }
+  };
+  const addTextFields = () => {
+    setInputFields([...inputFields, { text: "" }]);
+  };
 
   const isStepOptional = (step) => {
     return step === 1;
@@ -94,7 +91,7 @@ const Cart = () => {
       return <div>Hello1</div>;
     } else if (activeStep === 1) {
       return (
-        <div>
+        <div className="Step2">
           <div className="span-1">
             <h3>Florería Suecia</h3>
             <div className="NavbarCart">
@@ -155,57 +152,116 @@ const Cart = () => {
             >
               Soy nuevo
             </Button>
-            <Button
-              variant="contained"
-              style={{ backgroundColor: "#72509D", color: "#FFF" }}
-            >
+            <Button className="buttonViolet" variant="contained">
               Ingresar
             </Button>
             <p>Ingresar con</p>
             <div className="socialMedia">
-
-            <Button
-              variant="contained"
-              className="facebook"
-            >
-              facebook
-            </Button>
-            <Button
-              variant="contained"
-              className="google"
-            >
-              Google
-            </Button>
-              </div>
+              <Button variant="contained" className="facebook">
+                facebook
+              </Button>
+              <Button variant="contained" className="google">
+                Google
+              </Button>
+            </div>
           </div>
           <div className="span-3">
-          <div className="numbers">
+            <div className="numbers">
               <IconButton>{2}</IconButton>
               <h6>MÉTODO DE ENVIO</h6>
             </div>
-            <div className="radioSelection">    
-            <input type="radio" id="html" value="Retiro en tienda"/>
-            <label for="html">Retiro en tienda</label>
+            <div className="radioSelection">
+              <input type="radio" id="html" value="Retiro en tienda" />
+              <label for="html">Retiro en tienda</label>
             </div>
 
-            <div className="radioSelection">    
-            <input type="radio" id="html" value="Envío a domicilio"/>
-            <label for="html">Envío a domicilio</label>
-            <Button variant="contained" onClick = {() => addTextFields()} style={{backgroundColor:"#FFF",color:"#000",border:"1px solid #000"}} >
-              {"+"}
-            </Button>
-            {
-              inputFields.map((inputField,index)=>(
+            <div className="radioSelection">
+              <input type="radio" id="html" value="Envío a domicilio" />
+              <label for="html">Envío a domicilio</label>
+              <Button
+                variant="contained"
+                onClick={() => addTextFields()}
+                style={{
+                  backgroundColor: "#FFF",
+                  color: "#000",
+                  border: "1px solid #000",
+                }}
+              >
+                {"+"}
+              </Button>
+              {inputFields.map((inputField, index) => (
                 <TextField
                   value={inputField.value}
                   name="text"
                   key={index}
-                  onChange={event => handleChangeinput(index,event)}
+                  onChange={(event) => handleChangeinput(index, event)}
                   variant="filled"
                 />
-              ))
-            }
+              ))}
             </div>
+            <div className="radioSelection">
+              <input type="radio" id="html" value="Retiro en tienda" />
+              <label for="html">Retiro en tienda</label>
+            </div>
+          </div>
+          <div className="span-4">
+            <div className="numbers">
+              <IconButton>{3}</IconButton>
+              <h6>Review Your Producte</h6>
+            </div>
+            <div className="reviewProductCard">
+              <img
+                src={require("./../../assets/Rectangle69.png").default}
+                alt="productImage"
+              />
+              <h6>DEMIN</h6>
+              <p className="productdDetails">
+                Method de page Todos ios methdos habiito.
+              </p>
+              <p>TALE : 1</p>
+              <p>cantidad : 1 Combiar</p>
+              <strong>$9.900</strong>
+            </div>
+            <div>
+              <div>
+                <TextField label="Usar cupón" variant="outlined" />
+                <Button variant="contained" className="buttonViolet">
+                  Apply
+                </Button>
+              </div>
+              <p>
+                Si quieres puedes escribir un mensaje aquí y lo enviaremos en un
+                lindo sobre
+              </p>
+              <TextField variant="outlined" />
+              <FormGroup>
+                <FormControlLabel
+                  control={<Checkbox />}
+                  label="Demuesttra tu Agradec"
+                />
+              </FormGroup>
+            </div>
+          </div>
+          <div className="span-5">
+            <div>
+              <p>Sub Total</p>
+              <p>$9.900</p>
+            </div>
+            <div>
+              <p>Shipping</p>
+              <p>$9.9</p>
+            </div>
+            <div>
+              <strong>Other Total</strong>
+              <p>$9.9</p>
+            </div>
+          </div>
+          <div className="span-6">
+            <h6>Precio Final</h6>
+            <h4 style={{ color: "#72509D" }}>$9.900</h4>
+            <Button variant="contained" className="buttonViolet">
+              Finalizar compra
+            </Button>
           </div>
         </div>
       );

@@ -100,7 +100,7 @@ const Header = () => {
                     </span>
                     <span >
                     <img src = {require('./../../assets/cart.png').default} alt="Cart" style={{width :"22px", height :"24.73px"}}/>
-                    <a>Cart</a>
+                    <Link to="/cart">Cart</Link>
                     </span>
                     <span >
                     <img src = {require('./../../assets/user.png').default} alt="User" style={{width :"22px", height :"24px"}}/>
@@ -134,11 +134,11 @@ const Header = () => {
                   </span>
                   <span style={{margin:"1rem 0rem"}} >
                     <img src = {require('./../../assets/cart.png').default} alt="Cart" style={{width :"22px", height :"24.73px"}}/>
-                    <a>Cart</a>
+                    <Link to="/cart">Cart</Link>
                   </span>
                   <span style={{margin:"1rem 0rem"}} >
                     <img src = {require('./../../assets/user.png').default} alt="User" style={{width :"22px", height :"24px"}}/>
-                    <a>Mi Cuenta</a>
+                    <Link to="/myaccount">Mi Cuenta</Link>
                   </span>
               </div>
             </Drawer>

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 // import { withRouter } from "react-router";
 import "./ThankYou.scss";
-import refer from "./../../assets/refer.png";
+import refer from "./../../assets/Group256.png";
 import Ellipse192 from "./../../assets/Ellipse192.png";
 import Ellipse193 from "./../../assets/Ellipse193.png";
 import Vector from "./../../assets/Vector.png";
 import Vectorr from "./../../assets/Vectorr.png";
 import Rectangle129 from "./../../assets/Rectangle129.png";
 import Rectangle69 from "./../../assets/Rectangle69.png";
-import { Header, Footer } from "../../mainLayout/mainLayout"; 
 const ThankYou = () => {
   return (
     <>
