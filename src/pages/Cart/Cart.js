@@ -19,6 +19,8 @@ import TextField from "@mui/material/TextField";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import Divider from "@mui/material/Divider";
+
 
 const steps = [
   "Checkout",
@@ -151,7 +153,7 @@ const Cart = () => {
                 style={{ marginLeft: "auto" }}
               />
             </FormGroup>
-            <p style={{ color: "#6F6F6F", textAlign:"right" }}>
+            <p style={{ color: "#6F6F6F", textAlign: "right" }}>
               Olvidé mi contraseña?
             </p>
             <div
@@ -307,7 +309,135 @@ const Cart = () => {
         </div>
       );
     } else if (activeStep === 2) {
-      return <div>Hello3</div>;
+      return (
+        <div className="Step3">
+          <div className="span-1">
+            <h4 style={{ fontWeight: "bold", display: "block" }}>
+              Identification
+            </h4>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "0.45fr 0.1fr 0.45fr",
+                gap: "1rem",
+              }}
+            >
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(2,1fr)",
+                  gap: "1rem",
+                }}
+              >
+                <TextField
+                  variant="outlined"
+                  label=""
+                  InputLabelProps={{ shrink: false }}
+                />
+                <Button
+                  variant="contained"
+                  style={{ backgroundColor: "#509D6F", color: "#FFF" }}
+                >
+                  Submit
+                </Button>
+              </div>
+              <p
+                style={{
+                  margin: "0 0.8rem",
+                  textAlign: "center",
+                  alignSelf: "center",
+                }}
+              >
+                or
+              </p>
+              <Button
+                variant="contained"
+                style={{ backgroundColor: "#6174A5", color: "#FFF" }}
+              >
+                Ingresar con Facebook
+              </Button>
+            </div>
+            <Divider />
+            <div
+              style={{
+                margin: "1rem 0",
+                display: "grid",
+                gridTemplateColumns: "0.1fr 0.9fr",
+              }}
+            >
+              <label className="labelInputs" htmlFor="html">
+                Email
+              </label>
+              <TextField
+                label=""
+                variant="outlined"
+                InputLabelProps={{ shrink: false }}
+                style={{ width: "100%" }}
+              />
+            </div>
+            <div className="inputFiledsParent">
+              <div className="inputFields">
+                <label className="labelInputs" htmlFor="html">
+                  Nomtre
+                </label>
+                <TextField
+                  label=""
+                  variant="outlined"
+                  InputLabelProps={{ shrink: false }}
+                  style={{ width: "100%" }}
+                />
+              </div>
+              <div className="inputFields">
+                <label className="labelInputs" htmlFor="html">
+                  Apetidos
+                </label>
+                <TextField
+                  label=""
+                  variant="outlined"
+                  InputLabelProps={{ shrink: false }}
+                  style={{ width: "100%" }}
+                />
+              </div>
+            </div>
+            <div className="inputFiledsParent">
+              <div className="inputFields">
+                <label className="labelInputs" htmlFor="html">
+                  RUT
+                </label>
+                <TextField
+                  label=""
+                  variant="outlined"
+                  InputLabelProps={{ shrink: false }}
+                  style={{ width: "100%" }}
+                />
+              </div>
+              <div className="inputFields">
+                <label className="labelInputs" htmlFor="html">
+                  Teletono / Movil
+                </label>
+                <TextField
+                  label=""
+                  variant="outlined"
+                  InputLabelProps={{ shrink: false }}
+                  style={{ width: "100%" }}
+                />
+              </div>
+            </div>
+              <div>
+                <FormGroup>
+                  <FormControlLabel
+                    control={<Checkbox />}
+                    label="Demuestra tu agradec "
+                    style={{ marginRight: "auto" }}
+                  />
+                </FormGroup>
+              </div>
+              <Button variant="contained" className="buttonViolet" style={{width:"100%"}} >
+              Finalizar compra
+              </Button>
+          </div>
+        </div>
+      );
     } else if (activeStep === 3) {
       return <div>Hello4</div>;
     }

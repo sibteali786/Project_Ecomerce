@@ -3,18 +3,19 @@
   max-width: 1368px;
   margin: 0 auto;
   padding: 0 3rem;
+  font-family: "Poppins";
   .Step2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     .span-1 {
       display: flex;
-      align-items:center;
+      align-items: center;
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 1;
       grid-row-end: 2;
-      h3{
+      h3 {
         margin: 0;
       }
       .NavbarCart {
@@ -23,9 +24,9 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        div{
-          margin:0 2rem;
-          p{
+        div {
+          margin: 0 2rem;
+          p {
             text-align: center;
           }
         }
@@ -162,6 +163,28 @@
       align-items: center;
       h6 {
         margin: 0 0.4rem;
+      }
+    }
+  }
+
+  .Step3 {
+    .span-1 {
+      border: 1px solid $primaryFontColor;
+      padding: 1rem 1rem;
+      .labelInputs {
+        margin-right: "1.5rem";
+        align-self: center;
+        color: #818181;
+      }
+      .inputFiledsParent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        .inputFields {
+          display: grid;
+          grid-template-columns: 0.2fr 0.8fr;
+          margin:1rem 0;
+        }
       }
     }
   }
