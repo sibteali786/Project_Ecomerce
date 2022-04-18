@@ -15,9 +15,11 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";
+
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+
 
 const steps = [
   "Checkout",
@@ -33,6 +35,20 @@ const Cart = () => {
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword(!showPassword);
   const handleMouseDownPassword = () => setShowPassword(!showPassword);
+  // Handle the dynamic input adding ability
+  const [inputFields, setInputFields] = useState([
+    {text:""}
+  ]);
+  // Function for adding the input fields
+  const handleChangeinput = (index,event)=>{
+    const values = [...inputFields];
+    values[index][event.target.name] = event.target.value;
+    setInputFields(values);
+    console.log(values);
+  }
+  const addTextFields = ()=>{
+    setInputFields([...inputFields,{text:""}])
+  }
 
   const isStepOptional = (step) => {
     return step === 1;
@@ -161,6 +177,35 @@ const Cart = () => {
               Google
             </Button>
               </div>
+          </div>
+          <div className="span-3">
+          <div className="numbers">
+              <IconButton>{2}</IconButton>
+              <h6>MÉTODO DE ENVIO</h6>
+            </div>
+            <div className="radioSelection">    
+            <input type="radio" id="html" value="Retiro en tienda"/>
+            <label for="html">Retiro en tienda</label>
+            </div>
+
+            <div className="radioSelection">    
+            <input type="radio" id="html" value="Envío a domicilio"/>
+            <label for="html">Envío a domicilio</label>
+            <Button variant="contained" onClick = {() => addTextFields()} style={{backgroundColor:"#FFF",color:"#000",border:"1px solid #000"}} >
+              {"+"}
+            </Button>
+            {
+              inputFields.map((inputField,index)=>(
+                <TextField
+                  value={inputField.value}
+                  name="text"
+                  key={index}
+                  onChange={event => handleChangeinput(index,event)}
+                  variant="filled"
+                />
+              ))
+            }
+            </div>
           </div>
         </div>
       );

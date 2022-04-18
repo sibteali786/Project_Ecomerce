@@ -46,4 +46,11 @@
         
 
     }
+    .span-3{
+        .radioSelection{
+            border:1px solid $primaryFontColor;
+            padding: 0.8rem 0.5rem;
+            border-radius: 4px;
+        }
+    }
 }

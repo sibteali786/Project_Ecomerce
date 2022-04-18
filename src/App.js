@@ -1,7 +1,6 @@
 import React from "react";
 // import './App.css';
 import Home from "./pages/Home/Home";
-import SignUp from "./pages/SignUp/SignUp";
 import {
   BrowserRouter,
   Route,
@@ -15,6 +14,7 @@ import Footer from "./mainLayout/Footer/Footer";
 import MyAccount from "./pages/MyAccount/MyAccount";
 import Category from './pages/Category/Category';
 import Cart from './pages/Cart/Cart';
+// import ThankYou from './pages/Thankyou/ThankYou';
 
 const App = () => {
   return (
@@ -33,7 +33,7 @@ const App = () => {
           <Route path="/myaccount" element={<MyAccount/>} />
           <Route path="/category" element={<Category/>}/>
           <Route path="/cart" element={<Cart/>} />
-          
+            {/* <Route path="/thankyou" element={<ThankYou/>} /> */}
           </Routes>
           <Footer/>
         </BrowserRouter>

@@ -1,0 +1,380 @@
+.sabkapapa{
+    display: block;
+    
+}
+.one-1{
+    font-family: 'Original Factory';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 380%;
+    line-height: 130px;
+    /* identical to box height */
+    
+    letter-spacing: 0.05em;
+    
+    color: #72509D;
+}
+.one-2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 120%;
+    line-height: 33px;
+    text-align: center;
+    color: #000000;
+    width: 100%;
+}
+.linee{
+    position: relative;
+    left: 5.2%;
+    width: 90%;
+    height: 0px;
+    
+    top: 7px;
+    border: 1px solid #C4C4C4;
+}
+
+.two{
+    display: flex;
+    height: 560px;
+}
+.line1by2a{
+    position: relative;
+    width: 90%;
+    height: 0px;
+    left: 10%;
+    margin-top: 8%;
+    margin-bottom: 10%;
+    
+    border: 1px solid #C4C4C4;
+    
+    border: 1px solid #C4C4C4;
+}
+
+.leadslide{
+    position: relative;
+    width: 70%;
+    height: 10%;
+    left: 10%;
+    top: 8%;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 250%;
+    /* identical to box height */
+    
+    color: #000000;
+}
+.andatick {
+    position: relative;
+    right: 47%;
+}
+.betapic{
+    position: relative;
+    right: 2%;
+}
+.upertick{
+    position: relative;
+    top: 14%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    
+    color: #818181
+}
+.nechatick{
+    position: relative;
+    bottom: 10%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    
+    text-transform: capitalize;
+    
+    color: #000000;
+}
+.tasveer{
+    position: relative;
+    left: 10%;
+    bottom: 10%;
+
+}
+.textpic{
+    display: flex;
+}
+.baripic{
+    width: 90%;
+    max-height: 70%;
+}
+.adress1{
+    position: relative;
+    left: 14%;
+    top: 10%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    
+    text-transform: capitalize;
+    
+    color: #818181;
+}
+.adress2{
+    position: relative;
+    left: 14%;
+    bottom: 10%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    text-transform: capitalize;
+    
+    color: #000000;
+}
+.location{
+    position: relative;
+    right: 57%;
+    top: 37px;
+}
+.mappa{
+    background-color: white;
+    position: relative;
+    bottom: 230px;
+    left: 210px;
+    width: 35%;
+    height: 70px;
+    border-radius: 7px;
+}
+.table{
+    position: relative;
+    width: 40%;
+    height: 400px;
+    left: 3%;
+
+    top: 7px;
+    
+    background: #F4F4F4;
+    border-radius: 10px
+}
+.table{
+    display: flex;
+    justify-content: center;
+}
+.barasize{
+    width: 85%;
+}
+.onetable{
+    display: flex;
+}
+.fj{
+    position: relative;
+    left: 7%;
+    top: 30%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    
+    color: #000000
+}
+.three{
+    width: 50%;
+    padding-left: 5%;
+    position: relative;
+}
+.refer{
+    background: rgba(114, 80, 157, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 370px;
+    border-radius: 10px;
+}
+.gift{
+    margin-top: 25px;
+}
+.writtenrefer{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #72509D;
+}
+.pwrittenrefer{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    
+    color: #72509D
+}
+
+.RFY{
+    display: flex;
+    height: 60%;
+
+}
+.Rfriend{
+    width: 270px;
+    height: 100px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-right: 2%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.Ryou{
+    width: 270px;
+    height: 100px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-left: 2%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#price{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 33px;
+    /* identical to box height */
+    margin-top: 7%;
+    text-align: center;
+    margin-bottom: 3%;
+    color: #000000;
+}
+#reward{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 27px;
+    /* identical to box height */
+    
+    text-align: center;
+    line-height: 0;
+    margin-top: 0px;
+    
+    color: #818181
+}
+.uperemail{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    
+    color: #000000
+}
+#dibba{
+    position: relative;
+    width: 83%;
+    height: 50px;
+    left: 10%;
+    top: 10%;
+    
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.line1by2{
+    position: relative;
+    width: 100%;
+    height: 0px;
+    left: 0%;
+    margin-top: 8%;
+    margin-bottom: 10%;
+    
+    border: 1px solid #C4C4C4;
+}
+.bullet{
+    display: flex;
+}
+h3{
+    margin-left: 5%;
+}
+#anda{
+    height: 100%;
+    margin-top: 1%;
+}
+.detail{
+    position: relative;
+    left: 9%;
+}
+
+#motakaro{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    /* identical to box height */
+    
+    text-transform: uppercase;
+    
+    color: #000000
+}
+#motakarolc{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 45px;
+    text-transform: capitalize;
+    
+    color: #000000;
+}
+.rating{
+    display: flex;
+}
+.toprate{
+    margin-left: 55%;
+}
+.fmarks{
+    justify-content: center;
+    position: relative;
+    width: 9%;
+    height: 56px;
+    top: 15%;
+    
+    background: #72509D;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+#marks{
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    position: relative;
+    width: 9%;
+    height: 56px;
+    top: 15%;
+    
+    margin-left: 2%;
+    margin-bottom: 5%;
+    
+}
+.ratingbolcks{
+    display: flex;
+    
+}
+#no{
+    position: relative;
+    left: 38%;
+    top: 28%;
+}
+#nno{
+    position: relative;
+    left: 38%;
+    top: 28%;
+    color: #FFFFFF;
+}
