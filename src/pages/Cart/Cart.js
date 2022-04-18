@@ -120,11 +120,16 @@ const Cart = () => {
               <IconButton>{1}</IconButton>
               <h6>Información de cliente</h6>
             </div>
-            <TextField label="Email" variant="outlined" />
+            <TextField
+              label="Email"
+              variant="outlined"
+              style={{ width: "100%", margin: "0.6rem 0" }}
+            />
             <TextField
               label="Passowrd"
               variant="outlined"
               type={showPassword ? "text" : "password"}
+              style={{ width: "100%", margin: "0.6rem 0" }}
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -143,19 +148,32 @@ const Cart = () => {
               <FormControlLabel
                 control={<Checkbox />}
                 label="Recordar / No cerrar sesión"
+                style={{ marginLeft: "auto" }}
               />
             </FormGroup>
-            <p style={{ color: "#6F6F6F" }}>Olvidé mi contraseña?</p>
-            <Button
-              variant="contained"
-              style={{ backgroundColor: "#F4F4F4", color: "black" }}
+            <p style={{ color: "#6F6F6F", textAlign:"right" }}>
+              Olvidé mi contraseña?
+            </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(2,1fr)",
+                gap: "1rem",
+              }}
             >
-              Soy nuevo
-            </Button>
-            <Button className="buttonViolet" variant="contained">
-              Ingresar
-            </Button>
-            <p>Ingresar con</p>
+              <Button
+                variant="contained"
+                style={{ backgroundColor: "#F4F4F4", color: "black" }}
+              >
+                Soy nuevo
+              </Button>
+              <Button className="buttonViolet" variant="contained">
+                Ingresar
+              </Button>
+            </div>
+            <p style={{ textAlign: "center", margin: "0.8rem 0" }}>
+              Ingresar con
+            </p>
             <div className="socialMedia">
               <Button variant="contained" className="facebook">
                 facebook
@@ -171,33 +189,42 @@ const Cart = () => {
               <h6>MÉTODO DE ENVIO</h6>
             </div>
             <div className="radioSelection">
-              <input type="radio" id="html" value="Retiro en tienda" />
-              <label for="html">Retiro en tienda</label>
+              <div style={{ display: "block" }}>
+                <input type="radio" id="html" value="Retiro en tienda" />
+                <label for="html">Retiro en tienda</label>
+              </div>
             </div>
 
             <div className="radioSelection">
-              <input type="radio" id="html" value="Envío a domicilio" />
-              <label for="html">Envío a domicilio</label>
-              <Button
-                variant="contained"
-                onClick={() => addTextFields()}
-                style={{
-                  backgroundColor: "#FFF",
-                  color: "#000",
-                  border: "1px solid #000",
-                }}
-              >
-                {"+"}
-              </Button>
-              {inputFields.map((inputField, index) => (
-                <TextField
-                  value={inputField.value}
-                  name="text"
-                  key={index}
-                  onChange={(event) => handleChangeinput(index, event)}
-                  variant="filled"
-                />
-              ))}
+              <div style={{ display: "block" }}>
+                <input type="radio" id="html" value="Envío a domicilio" />
+                <label for="html">Envío a domicilio</label>
+              </div>
+              <div>
+                <Button
+                  variant="contained"
+                  onClick={() => addTextFields()}
+                  style={{
+                    backgroundColor: "#FFF",
+                    color: "#000",
+                    border: "1px solid #000",
+                    width: "100%",
+                    margin: "0.8rem 0",
+                  }}
+                >
+                  {"+"}
+                </Button>
+                {inputFields.map((inputField, index) => (
+                  <TextField
+                    value={inputField.value}
+                    name="text"
+                    key={index}
+                    onChange={(event) => handleChangeinput(index, event)}
+                    variant="outlined"
+                    style={{ width: "100%", margin: "0.8rem 0" }}
+                  />
+                ))}
+              </div>
             </div>
             <div className="radioSelection">
               <input type="radio" id="html" value="Retiro en tienda" />
@@ -215,31 +242,43 @@ const Cart = () => {
                 alt="productImage"
               />
               <div>
-              <h6>DEMIN</h6>
-              <p className="productdDetails">
-                Method de page Todos ios methdos habiito.
-              </p>
-              <p>TALE : 1</p>
-              <p>cantidad : 1 Combiar</p>
+                <h6>DEMIN</h6>
+                <p className="productdDetails">
+                  Method de page Todos ios methdos habiito.
+                </p>
+                <p>TALE : 1</p>
+                <p>cantidad : 1 Combiar</p>
               </div>
               <strong>$9.900</strong>
             </div>
             <div>
-              <div>
-                <TextField label="Usar cupón" variant="outlined" />
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3,1fr)",
+                  gap: "1rem",
+                }}
+              >
+                <TextField
+                  label="Usar cupón"
+                  variant="outlined"
+                  style={{ gridColumn: "1/3" }}
+                />
                 <Button variant="contained" className="buttonViolet">
                   Apply
                 </Button>
               </div>
-              <p>
+
+              <p style={{ display: "block", margin: "0.6rem 0" }}>
                 Si quieres puedes escribir un mensaje aquí y lo enviaremos en un
                 lindo sobre
               </p>
-              <TextField variant="outlined" />
+              <TextField variant="outlined" style={{ width: "100%" }} />
               <FormGroup>
                 <FormControlLabel
                   control={<Checkbox />}
                   label="Demuesttra tu Agradec"
+                  style={{ marginLeft: "auto" }}
                 />
               </FormGroup>
             </div>
