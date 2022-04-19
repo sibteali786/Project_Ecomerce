@@ -8,9 +8,20 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
+
+// Select Menu imports
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+// Svgs as images
 import { ReactComponent as Refresh } from "./../../assets/Refresh.svg";
 import { ReactComponent as Lock } from "./../../assets/Lock.svg";
 import { ReactComponent as DeliverySvg } from "./../../assets/DeliverySvg.svg";
+import { ReactComponent as LetterIcon } from "./../../assets/letter.svg";
+import { ReactComponent as HomeIcon } from "./../../assets/home.svg";
+
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -20,7 +31,6 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Divider from "@mui/material/Divider";
-
 
 const steps = [
   "Checkout",
@@ -47,6 +57,13 @@ const Cart = () => {
   };
   const addTextFields = () => {
     setInputFields([...inputFields, { text: "" }]);
+  };
+
+  // Handling select menu
+  const [selectLocation, setselectLocation] = React.useState("");
+
+  const handleSelectLocationChange = (event) => {
+    setselectLocation(event.target.value);
   };
 
   const isStepOptional = (step) => {
@@ -320,7 +337,7 @@ const Cart = () => {
                 display: "grid",
                 gridTemplateColumns: "0.45fr 0.1fr 0.45fr",
                 gap: "1rem",
-                marginBottom:"1rem"
+                marginBottom: "1rem",
               }}
             >
               <div
@@ -424,18 +441,92 @@ const Cart = () => {
                 />
               </div>
             </div>
-              <div>
-                <FormGroup>
-                  <FormControlLabel
-                    control={<Checkbox />}
-                    label="Demuestra tu agradec "
-                    style={{ marginRight: "auto" }}
-                  />
-                </FormGroup>
-              </div>
-              <Button variant="contained" className="buttonViolet" style={{width:"100%"}} >
+            <div>
+              <FormGroup>
+                <FormControlLabel
+                  control={<Checkbox />}
+                  label="Demuestra tu agradec "
+                  style={{ marginRight: "auto" }}
+                />
+              </FormGroup>
+            </div>
+            <Button
+              variant="contained"
+              className="buttonViolet"
+              style={{ width: "100%" }}
+            >
               Finalizar compra
-              </Button>
+            </Button>
+          </div>
+          <div className="span-2">
+            <h6 style={{display:"block",textTransform:"capitalize"}}>resumen de la compra</h6>
+            <div className="CardProduct">
+              <img
+                src={require("./../../assets/Rectangle69.png").default}
+                alt="productImage"
+              />
+              <div style={{display:"flex",flexDirection:"column",justifyContent:"center",marginLeft:"1rem"}}>
+              <p>Jeans Boston FJ Blue 44</p>
+              <strong>$9.900</strong>
+              </div>
+            </div>
+            <Divider style={{margin:"0.7rem 0",gridRowStart: '3',gridColumn: "1/5"}}/>
+              <div style={{display:"flex",flexDirection:"row",justifyContent:"flex-end",gridColumn: "1/5",gridRow: "4/5"}}>
+                <p style={{margin:"0 1rem"}}>Sub Total</p>
+                <p style={{margin:"0 1rem"}}>$9.900</p>
+              </div>
+              <div style={{backgroundColor:"#E5E5E5",padding:"0.8rem 0.5rem",
+              display:"flex",flexDirection:"row",justifyContent:"flex-end",alignItems:"center",
+              gridColumn: "1/5",gridRow: "5/6",
+              borderRadius:"4px"}}>
+                <strong style={{margin:"0 1rem"}}>Total</strong>
+                <strong style={{margin:"0 1rem"}}>$9.900</strong>
+              </div>
+          </div>
+          <div className="span-3">
+            <HomeIcon />
+            <div>
+              <h6>Envio</h6>
+              <p style={{ color: "#818181", fontSize: "0.8rem" }}>
+                Demuestra tu agradec
+              </p>
+              <FormControl>
+                <TextField
+                  value={selectLocation}
+                  helperText="Select a location"
+                  label=""
+                  select
+                  onChange={handleSelectLocationChange}
+                  InputLabelProps={{ shrink: false }}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <LocationOnOutlinedIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                  variant="outlined"
+                >
+                  <option value={"$ Mayor a menor"}>Street 44, address </option>
+                  <option value={"$ Mayor a menor"}>$ Mayor a menor</option>
+                  <option value={"$ Mayor a menor"}>$ Mayor a menor</option>
+                </TextField>
+              </FormControl>
+            </div>
+          </div>
+          <div className="span-4">
+            <LetterIcon />
+            <div>
+              <h6>pago</h6>
+              <p style={{ color: "#818181", fontSize: "0.8rem" }}>
+                Demuestra tu agradec
+              </p>
+              <TextField
+                label=""
+                InputLabelProps={{ shrink: false }}
+                variant="outlined"
+              />
+            </div>
           </div>
         </div>
       );
