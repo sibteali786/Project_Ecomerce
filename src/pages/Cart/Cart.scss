@@ -208,6 +208,13 @@
       img {
         width: 100px;
       }
+      .FieldUpperText{
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    a{
+      margin-left:auto;
+    }
+      }
       .CardProduct {
         grid-column-start: 1;
         grid-column-end: 4;

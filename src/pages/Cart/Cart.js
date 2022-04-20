@@ -137,11 +137,26 @@ const Cart = () => {
               <IconButton>{1}</IconButton>
               <h6>Información de cliente</h6>
             </div>
+            <h6 style={{marginTop:"1rem",fontSize:"1.5rem"}}>Sign In</h6>
+            <div className="FieldUpperText">
+              <p>Not Registered?</p>
+              <a href="#">Create Account</a>
+            </div>
+            <div>
+            <label htmlFor="html">Email</label>
             <TextField
               label="Email"
               variant="outlined"
               style={{ width: "100%", margin: "0.6rem 0" }}
-            />
+              />
+              </div>
+              <div>
+            <div className="FieldUpperText">
+              <label>
+                Password
+              </label>
+              <a href="#">Forget Passowrd</a>
+            </div>
             <TextField
               label="Passowrd"
               variant="outlined"
@@ -154,13 +169,14 @@ const Cart = () => {
                       aria-label="toggle password visibility"
                       onClick={handleClickShowPassword}
                       onMouseDown={handleMouseDownPassword}
-                    >
+                      >
                       {showPassword ? <Visibility /> : <VisibilityOff />}
                     </IconButton>
                   </InputAdornment>
                 ),
               }}
-            />
+              />
+              </div>
             <FormGroup>
               <FormControlLabel
                 control={<Checkbox />}
