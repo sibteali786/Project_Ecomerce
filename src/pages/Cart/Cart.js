@@ -8,7 +8,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
-
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
 // Select Menu imports
 
 import FormControl from "@mui/material/FormControl";
@@ -190,28 +191,24 @@ const Cart = () => {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(2,1fr)",
                 gap: "1rem",
               }}
             >
               <Button
                 variant="contained"
-                style={{ backgroundColor: "#F4F4F4", color: "black" }}
+                style={{ backgroundColor: "#72509d", color: "white" }}
               >
-                Soy nuevo
-              </Button>
-              <Button className="buttonViolet" variant="contained">
-                Ingresar
+                Sign In
               </Button>
             </div>
             <p style={{ textAlign: "center", margin: "0.8rem 0" }}>
               Ingresar con
             </p>
             <div className="socialMedia">
-              <Button variant="contained" className="facebook">
+              <Button variant="contained" className="facebook" startIcon={<FacebookIcon style={{fill:"#FFFFFF"}}/>}>
                 facebook
               </Button>
-              <Button variant="contained" className="google">
+              <Button variant="contained" className="google" startIcon={<GoogleIcon/>}>
                 Google
               </Button>
             </div>
