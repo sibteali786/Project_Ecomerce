@@ -31,6 +31,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Divider from "@mui/material/Divider";
 import CardDetails from "./../../mainLayout/CardDetails/CardDetails";
+import StepOne from './../../mainLayout/Step1/StepOne';
 const steps = [
   "Checkout",
   "User Information",
@@ -104,9 +105,15 @@ const Cart = () => {
   const handleReset = () => {
     setActiveStep(0);
   };
+  // Modal State and methods
+  const [open, setOpen] = React.useState(false);
+  useEffect(() => {
+    setOpen(true);
+  }, [])
+  
   const ContentDivs = () => {
     if (activeStep === 0) {
-      return <div>Hello1</div>;
+      return <><StepOne value={[open,setOpen]} /></>;
     } else if (activeStep === 1) {
       return (
         <div className="Step2">
