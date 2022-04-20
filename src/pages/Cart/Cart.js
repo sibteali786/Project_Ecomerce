@@ -10,10 +10,8 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 
 // Select Menu imports
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
+
 import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 // Svgs as images
 import { ReactComponent as Refresh } from "./../../assets/Refresh.svg";
@@ -31,7 +29,7 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Divider from "@mui/material/Divider";
-
+import CardDetails from "./../../mainLayout/CardDetails/CardDetails";
 const steps = [
   "Checkout",
   "User Information",
@@ -507,9 +505,9 @@ const Cart = () => {
                   }}
                   variant="outlined"
                 >
-                  <option value={"$ Mayor a menor"}>Street 44, address </option>
-                  <option value={"$ Mayor a menor"}>$ Mayor a menor</option>
-                  <option value={"$ Mayor a menor"}>$ Mayor a menor</option>
+                  <option value={"$ Mayor a menor"}>Street 44, address</option>
+                  <option value={"$ Mayor a menor"}>Street 44, address</option>
+                  <option value={"$ Mayor a menor"}>Street 44, address</option>
                 </TextField>
               </FormControl>
             </div>
@@ -531,7 +529,7 @@ const Cart = () => {
         </div>
       );
     } else if (activeStep === 3) {
-      return <div>Hello4</div>;
+      return <><CardDetails/></>;
     }
   };
 

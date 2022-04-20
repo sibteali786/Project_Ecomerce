@@ -1,0 +1,59 @@
+@import "./../utillities_config";
+
+  .Step4{
+    h6{
+        text-transform: uppercase;
+        font-size:1rem;
+    }
+      .span-1{
+          margin:1rem 0;
+          h3{
+              margin-bottom:0.5rem;
+
+          }
+          p{
+              margin:0;
+              font-size:0.8rem;
+            color:$primaryFontColor;
+          }
+      }
+
+      .span-2{
+          border: 1px solid $primaryFontColor;
+          border-radius: 4px;
+          padding:1rem 1rem;
+          label{
+              color:$primaryFontColor;
+          }
+      }
+
+      .span-3{
+        border: 1px solid $primaryFontColor;
+        border-radius: 4px;
+        padding:1rem 1rem;
+      }
+      .span-4{
+        border: 1px solid $primaryFontColor;
+        border-radius: 4px;
+        padding:1rem 1rem;
+          span{
+              label{
+                  display:block;
+              }
+          }
+      }
+      .buttonViolet {
+        background-color: #72509d;
+        color: #fff;
+      }
+      .radioSelection{
+        border: 1px solid $primaryFontColor;
+        padding: 0.8rem 0.5rem;
+        border-radius: 4px;
+        margin: 0.8rem 0;
+        label {
+          margin: 0 0.4rem;
+        }
+      }
+  }
+
