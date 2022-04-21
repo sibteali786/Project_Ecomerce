@@ -145,6 +145,8 @@ const Category = () => {
           </Search>
         </div>
         <div className="span-4">
+          <div>
+
           <p>Ordenar por :</p>
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Select</InputLabel>
@@ -160,7 +162,8 @@ const Category = () => {
               <MenuItem value={"$ Mayor a menor"}>$ Mayor a menor</MenuItem>
             </Select>
           </FormControl>
-          <Button variant="contabied">$ Mayor a menor</Button>
+              </div>
+          <Button variant="contained">$ Mayor a menor</Button>
         </div>
         <div className="span-5">
           <div
