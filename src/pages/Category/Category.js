@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Category.scss";
 import Stack from "@mui/material/Stack";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
@@ -26,7 +26,7 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import ProductCard from "./../../mainLayout/ProductCard/ProductCard";
 import { collectionImages } from "./../../assets/collectionImages/index";
 import Pagination from "@mui/material/Pagination";
-
+import Drawer from "@mui/material/Drawer";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -70,7 +70,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const Category = () => {
   // handling the collapsing menu state
   const [openProduct, setopenProduct] = React.useState(true);
-
+  const [state, setState] = useState(false);
+  const toggleDrawer = (open) => (event) => {
+    setState(open);
+  };
   const handleProduct = () => {
     setopenProduct(!openProduct);
   };
@@ -169,10 +172,28 @@ const Category = () => {
             }}
           >
             <h5>FILTROS</h5>
-            <IconButton aria-label="">
+            <IconButton aria-label="" onClick={toggleDrawer(true)}>
               <Filter />
             </IconButton>
-          </div>
+            <Drawer
+              variant="temporary"
+              anchor="right"
+              open={state}
+              onClose={toggleDrawer(false)}
+            >
+              <div
+                className="DrawerElements"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "250px",
+                  alignItems: "flex-start",
+                  justifyContent: "space-evenly",
+                  padding: "0 2rem",
+                  margin: "1rem",
+                  height: "600px",
+                }}
+              >      
           <h6>Rango de precio</h6>
           <div className="seeachInFilter">
             <TextField label="Desde" variant="outlined" />
@@ -255,6 +276,94 @@ const Category = () => {
           >
             Limpiar Filtros (0)
           </Button>
+              </div>
+            </Drawer>
+          </div>
+          <div className="DesktopFilter">
+
+          <h6>Rango de precio</h6>
+          <div className="seeachInFilter">
+            <TextField label="Desde" variant="outlined" />
+            <TextField label="Hasta" variant="outlined" />
+            <IconButton aria-label="" style={{ fontSize: "2rem" }}>
+              {">"}
+            </IconButton>
+          </div>
+          <Divider />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <h6>Producto</h6>
+            <IconButton aria-label="" onClick={handleProduct}>
+              {openProduct ? <ExpandLess /> : <ExpandMore />}
+            </IconButton>
+          </div>
+          <Collapse in={openProduct} timeout="auto" unmountOnExit>
+            <List
+              sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+            >
+              {[
+                "Flores",
+                "Plantas",
+                "Postres",
+                "Globos",
+                "Peluches",
+                "Joyeria",
+                "Belleza",
+                "Juguestes",
+                "Botanas",
+              ].map((item, index) => {
+                const labelId = `checkbox-list-label-${index}`;
+
+                return (
+                  <ListItem key={index} disablePadding>
+                    <ListItemButton
+                      role={undefined}
+                      onClick={handleToggle(item)}
+                      dense
+                      >
+                      <ListItemIcon>
+                        <Checkbox
+                          edge="start"
+                          checked={checked.indexOf(item) !== -1}
+                          tabIndex={-1}
+                          disableRipple
+                          inputProps={{ "aria-labelledby": labelId }}
+                          />
+                      </ListItemIcon>
+                      <ListItemText id={labelId} primary={`${item}`} />
+                    </ListItemButton>
+                  </ListItem>
+                );
+              })}
+            </List>
+          </Collapse>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <h6>Coleooion</h6>
+            <IconButton aria-label="" onClick={handleCollection}>
+              {openCollection ? <ExpandLess /> : <ExpandMore />}
+            </IconButton>
+          </div>
+          <Collapse in={openCollection} timeout="auto" unmountOnExit></Collapse>
+          <Button
+            variant="contained"
+            style={{ color: "#FFF", backgroundColor: "#72509D" }}
+            >
+            Limpiar Filtros (0)
+          </Button>
+            </div>
         </div>
         <div className="span-6">
           <Divider />
@@ -270,8 +379,8 @@ const Category = () => {
             ))}
           </div>
         </div>
-        <div className="span-7" >
-          <Stack spacing={2}>
+        <div className="span-7">
+          <Stack className="stackPagination" spacing={2}>
             <Pagination count={10} />
           </Stack>
         </div>
