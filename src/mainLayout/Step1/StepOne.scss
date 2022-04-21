@@ -8,6 +8,7 @@
 
     h4{
         grid-column: 1/5;
+        margin:0;
     }
 
     .carousel{
@@ -41,6 +42,9 @@
     justify-content: space-between;
     display: flex;
     align-items: center;
+    h6{
+        color:$secondaryColor;
+    }
     }
 
     .buttonViolet {

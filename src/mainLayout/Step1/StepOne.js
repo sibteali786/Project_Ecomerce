@@ -17,7 +17,6 @@ const style = {
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
-    p: 4,
   };
   
 const StepOne = (props) => {
@@ -32,9 +31,9 @@ const StepOne = (props) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="ContainerModal">
-          <h4>Complete predico (Optional)</h4>
-          <Divider style={{magin:"1rem 0"}} />
-          <div className="midContainer">
+          <h4 style={{padding:"1rem 1rem"}}>Complete predico (Optional)</h4>
+          <Divider style={{magin:"1rem 0",gridColumn:"1/5"}} />
+          <div className="midContainer" style={{padding:"1rem 1rem"}}>
 
           <Carousel itemsToShow={5} className="carousel">
         {productImagesButton.map((item, index) => (
@@ -48,8 +47,8 @@ const StepOne = (props) => {
             <p>Ver globos y mas</p>
           </div>
           </div>
-          <Divider style={{magin:"1rem 0"}} />
-          <div className="lowerBox">
+          <Divider style={{magin:"1rem 0",gridColumn:"1/5"}} />
+          <div className="lowerBox" style={{padding:"1rem 1rem"}}>
             <h6>CORONA ACOMPANAMIENTO</h6>
             <Button variant="contained" className="buttonViolet">
             $ Menor a mayor
