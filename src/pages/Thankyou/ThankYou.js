@@ -60,7 +60,7 @@ const ThankYou = () => {
                 <th>
                   <div className="onetable">
                     <div>
-                      <img src={Rectangle69}></img>
+                      <img width="120px" src={Rectangle69}></img>
                     </div>
                   <div>
                     <p className="fj" > Jeans Boston <br/> FJ Blue 44</p></div>
@@ -99,7 +99,7 @@ const ThankYou = () => {
         </Grid>
         <Grid item xs={11} className="papathree">
         <Grid item sm={12} md={6} lg={6} xl={5}className="three">
-          <div className="para">
+          <div className="para2">
             <h4>Your order is confirmed</h4>
             <p>
               We’ve accepted your order, and we’re getting it ready. A confirmation
