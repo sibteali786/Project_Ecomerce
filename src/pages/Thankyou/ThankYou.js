@@ -69,27 +69,27 @@ const ThankYou = () => {
                 <th >x1</th>
                 <th className="pad">$99.00</th>
               </tr>
-              <tr>
+              <tr className="pricingRow">
                 <td id="rboder">SubTotal</td>
                 <td id="rboder"></td>
                 <td id="rboder">$99.00</td>
               </tr>
-              <tr>
+              <tr className="pricingRow">
                 <td id="rboder">Discount</td>
                 <td id="rboder"></td>
                 <td id="rboder">-$9.00</td>
               </tr>
-              <tr>
+              <tr className="pricingRow">
                 <td id="rboder">Shipping</td>
                 <td id="rboder"></td>
                 <td id="rboder">$0</td>
               </tr>
-              <tr>
+              <tr className="pricingRow">
                 <td id="rrboder">Taxes</td>
                 <td id="rrboder"></td>
                 <td id="rrboder">$35</td>
               </tr>
-              <tr>
+              <tr className="pricingRow">
                 <th id="rboder">Total</th>
                 <th id="rboder"></th>
                 <th id="rboder">$125</th>
