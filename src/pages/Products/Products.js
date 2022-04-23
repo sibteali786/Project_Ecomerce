@@ -28,7 +28,15 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { productImagesButton } from "./../../assets/productImagesBottom/index";
 import ProductCard from "./../../mainLayout/ProductCard/ProductCard";
+
 const Products = () => {
+  // Breakpoints for carousel
+  const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2},
+  { width: 768, itemsToShow: 3 },
+];
+
   // List Item state
   const [open, setOpen] = React.useState(false);
 
@@ -118,7 +126,6 @@ const Products = () => {
             grabCursor={true}
             thumbs={{ swiper: activeThumb }}
             className="product-image-slider"
-            style={{ width: "500px", height: "500px" }}
           >
             {productImages.map((item, index) => (
               <SwiperSlide key={index}>
@@ -137,7 +144,7 @@ const Products = () => {
             slidesPerView={3}
             modules={[Navigation, Thumbs]}
             className="product-image-slider-thumbs"
-            style={{ marginTop: "1rem", width: "500px" }}
+            style={{ marginTop: "1rem"}}
           >
             {productImages.map((item, index) => (
               <SwiperSlide key={index}>
@@ -156,13 +163,14 @@ const Products = () => {
           <div
             style={{
               display: "flex",
-              justifyContent: "space-around",
+              justifyContent: "space-between",
             }}
-          >
+            >
             <h6>Vino 3V y Botanas con Globo "Love You"</h6>
             <h6 style={{ fontWeight: "bold" }}>
               $1,115.00 <span style={{ color: "#72509D" }}> MXN </span>
             </h6>
+          </div>
           </div>
           <Divider style={{ color: "#C4C4C4" }} />
           <div id="productDescription1">
@@ -217,7 +225,7 @@ const Products = () => {
                 <p>24 Rose Stems Double the Blooms</p>
               </div>
 
-              <div>
+              <div>     
                 <h6>$24</h6>
                 <p>ORIGINAL</p>
                 <p>12 Rose Stems A Classic Sized Bouq</p>
@@ -225,9 +233,10 @@ const Products = () => {
             </div>
           </div>
           <Divider style={{ color: "#C4C4C4" }} />
+
           <div id="productDescription3">
             <h6>3.- Complementar pedido (opcional)</h6>
-            <Carousel itemsToShow={3} className="carousel">
+            <Carousel breakPoints={breakPoints} className="carousel">
               {selectableProductImages.map((item, index) => (
                 <div key={index}>
                   <img src={item.src.default} />
@@ -239,13 +248,13 @@ const Products = () => {
               ))}
             </Carousel>
           </div>
-
           <div
             style={{
               width: "100%",
               marginTop: "0.8rem",
               marginBottom: "0.8rem",
             }}
+            className="AddCart"
           >
             <Button
               variant="contained"
@@ -254,6 +263,7 @@ const Products = () => {
                 width: "100%",
                 height: "60px",
                 border: "1px solid black",
+                color:"black"
               }}
               startIcon={<Gift />}
             >
@@ -281,7 +291,6 @@ const Products = () => {
               sección de "Datos de Envío y Formas de Pago".{" "}
             </p>
           </div>
-        </div>
       </div>
       <div>
         <div>
