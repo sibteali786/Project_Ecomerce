@@ -13,7 +13,7 @@ import Divider from "@mui/material/Divider";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import IconButton from "@mui/material/IconButton";
 import { selectableProductImages } from "./../../assets/selectableProductImages/index";
-import Carousel from "react-elastic-carousel";
+
 import { ReactComponent as Gift } from "./../../assets/gift.svg";
 import Button from "@mui/material/Button";
 import Tabs from "@mui/material/Tabs";
@@ -28,14 +28,39 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { productImagesButton } from "./../../assets/productImagesBottom/index";
 import ProductCard from "./../../mainLayout/ProductCard/ProductCard";
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 const Products = () => {
   // Breakpoints for carousel
-  const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2},
-  { width: 768, itemsToShow: 3 },
-];
+  var settings = {
+    dots: true,
+    infinite: true,
+    arrows:true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 3,
+    centerMode:true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }
+    ]
+  };
 
   // List Item state
   const [open, setOpen] = React.useState(false);
@@ -236,7 +261,7 @@ const Products = () => {
 
           <div id="productDescription3">
             <h6>3.- Complementar pedido (opcional)</h6>
-            <Carousel breakPoints={breakPoints} className="carousel">
+            <Slider {...settings} className="carousel">
               {selectableProductImages.map((item, index) => (
                 <div key={index}>
                   <img src={item.src.default} />
@@ -246,7 +271,7 @@ const Products = () => {
                   </h6>
                 </div>
               ))}
-            </Carousel>
+            </Slider>
           </div>
           <div
             style={{
